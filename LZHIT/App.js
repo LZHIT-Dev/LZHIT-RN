@@ -21,6 +21,8 @@ const Apps = () => {
         </Card>
         <Card style={styles.comCard}>
           <Text style={styles.comCardText}>校园生活</Text>
+          <Image source={require('./resource/images/connect.png')}  style={styles.funcIcon}/>
+          <Text style={styles.funcIconDesc}>校园网认证</Text>
         </Card>
         <Text style={styles.footerText}>应用信息</Text>
       </View>
@@ -61,6 +63,14 @@ const styles = StyleSheet.create({
     marginTop:30,
     fontSize:12,
     color:'#C0C0C0',
+  },
+  funcIcon:{
+    width:50,
+    height:50,
+    marginLeft:20,
+  },
+  funcIconDesc:{
+    marginLeft:20
   }
 });
 
