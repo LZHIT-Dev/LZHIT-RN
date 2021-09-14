@@ -1,9 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, Dimensions, Button, Image} from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Dimensions, Button, Image, AppRegistry} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Card } from 'react-native-shadow-cards';
-
-const {width} = Dimensions.get('window')
+import {DrawerNavigator,TabNavigator,StackNavigator} from 'react-navigation'
 
 const Apps = () => {
     return (
