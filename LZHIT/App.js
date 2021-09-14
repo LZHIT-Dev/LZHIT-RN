@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar, Dimensions, Button, Image, AppRegistry} from 'react-native';
+import { color } from 'react-native-elements/dist/helpers';
 import LinearGradient from 'react-native-linear-gradient';
 import { Card } from 'react-native-shadow-cards';
 import {DrawerNavigator,TabNavigator,StackNavigator} from 'react-navigation'
@@ -52,7 +53,9 @@ const styles = StyleSheet.create({
     marginTop:10,
     marginLeft:10,
     marginBottom:10,
-    fontSize: 20
+    fontSize: 15,
+    color:'#696969',
+    fontWeight: 'bold'
   },
   footerText:{
     marginTop:30,
