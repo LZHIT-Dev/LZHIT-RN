@@ -26,7 +26,7 @@ const Apps = () => {
       </View>
     );
 };
-
+//样式表
 const styles = StyleSheet.create({
   lgs: {
     width: 1080,
