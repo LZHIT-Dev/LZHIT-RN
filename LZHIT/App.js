@@ -8,27 +8,26 @@ export default class App extends Component {
     const { navigation } = this.props;
     return (
       <>
-      <StatusBar translucent={true} backgroundColor="transparent" barStyle="light-content" />
-      <View style={styles.titleBar}>
-        <Text style={styles.titleText}>在鹿山</Text>
-        <Text style={styles.hitokoto}>这里是一言</Text>
-      </View>
-      <View style={styles.bodyContent}>
-        <View style={styles.group1}>
-          <Text style={styles.group1Text}>
-            教务相关
-          </Text>
-          <View style={styles.imageBtnArea}>
-          <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
-          <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn}/>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
-          <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn}/>
-          </TouchableOpacity>
-
+        <StatusBar translucent={true} backgroundColor="transparent" barStyle="light-content" />
+        <View style={styles.titleBar}>
+          <Text style={styles.titleText}>在鹿山</Text>
+          <Text style={styles.hitokoto}>这里是一言</Text>
+        </View>
+        <View style={styles.bodyContent}>
+          <View style={styles.group1}>
+            <Text style={styles.group1Text}>
+              教务相关
+            </Text>
+            <View style={styles.imageBtnArea}>
+              <TouchableOpacity onPress={() => { Linking.openURL('http://xgxt.lzhit.edu.cn/xsfw/sys/emaphome/portal/index.do') }}>
+                <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn} />
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
+                <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn} />
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
-      </View>
       </>
     );
   }
@@ -55,44 +54,44 @@ const styles = StyleSheet.create({
   titleBar: {
     flex: 2,
     backgroundColor: '#E9E9E9',
-    height:10,
-    
+    height: 10,
+
   },
-  titleText:{
-    fontSize:40,
-    fontWeight:'600',
-    marginLeft:30,
+  titleText: {
+    fontSize: 40,
+    fontWeight: '600',
+    marginLeft: 30,
     marginTop: 90
   },
-  hitokoto:{
-    marginTop:20,
-    marginLeft:30,
-    fontSize:20,
-    fontWeight:'bold',
+  hitokoto: {
+    marginTop: 20,
+    marginLeft: 30,
+    fontSize: 20,
+    fontWeight: 'bold',
     fontStyle: 'italic',
   },
   bodyContent: {
     flex: 5,
     backgroundColor: '#FFFFFF',
-    borderTopLeftRadius:30,
-    borderTopRightRadius:30,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
   },
-  group1:{
-    marginTop:30,
+  group1: {
+    marginTop: 30,
   },
-  group1Text:{
-    fontSize:20,
-    fontWeight:'bold',
-    marginLeft:30
+  group1Text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: 30
   },
-  imageBtnArea:{
-    marginTop:15,
+  imageBtnArea: {
+    marginTop: 15,
     flexWrap: 'wrap',
-    flexDirection:'row'
+    flexDirection: 'row'
   },
-  imageBtn:{
-    marginLeft:30,
-    width:135,
-    height:166,
+  imageBtn: {
+    marginLeft: 30,
+    width: 135,
+    height: 166,
   }
 });
