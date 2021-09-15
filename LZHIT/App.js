@@ -5,6 +5,7 @@ import { Card } from 'react-native-shadow-cards';
 
 export default class App extends Component {
   render() {
+    const {navigation}=this.props;
     return (
       <View style={styles.container}>
         <StatusBar translucent={true} backgroundColor="transparent" barStyle="light-content" />
@@ -12,13 +13,16 @@ export default class App extends Component {
         start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#00c6ff', '#0072ff']} style={styles.lgs} />
                 <View style={styles.block}></View>
         <Text style={styles.titleText}>在鹿山</Text>
+        
+        <TouchableOpacity>
         <Image
         source={{uri:'https://skinit.top/info.png?v=Math.random()'}}
         style={{width:308, height:65,marginTop:30}} />
+        </TouchableOpacity>
         <Card style={styles.comCard}>
           <Text style={styles.comCardText}>教务相关</Text>
            <View style={styles.comCardView}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate(Jwxt)}}>
              <View style={styles.funcView}>
                <Image source={require('./resource/images/jwxt.png')} style={styles.funcIcon}/>
                <Text style={styles.funcIconDesc}>教务系统</Text>
@@ -76,6 +80,7 @@ export default class App extends Component {
     );
   }
 }
+
 //样式表
 const styles = StyleSheet.create({
   lgs: {
