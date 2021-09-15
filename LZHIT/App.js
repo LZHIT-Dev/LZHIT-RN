@@ -14,8 +14,8 @@ export default class App extends Component {
           <Text style={styles.hitokoto}>这里是一言</Text>
         </View>
         <View style={styles.bodyContent}>
-          <View style={styles.group1}>
-            <Text style={styles.group1Text}>
+          <View style={styles.group}>
+            <Text style={styles.groupText}>
               教务相关
             </Text>
             <View style={styles.imageBtnArea}>
@@ -24,6 +24,22 @@ export default class App extends Component {
               </TouchableOpacity>
               <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
                 <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn} />
+              </TouchableOpacity>
+            </View>
+          </View>
+          <View style={styles.group}>
+            <Text style={styles.groupText}>
+              校园生活
+            </Text>
+            <View style={styles.imageBtnArea}>
+              <TouchableOpacity>
+                <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork}/>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs}/>
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic  }/>
               </TouchableOpacity>
             </View>
           </View>
@@ -76,10 +92,10 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
-  group1: {
+  group: {
     marginTop: 30,
   },
-  group1Text: {
+  groupText: {
     fontSize: 20,
     fontWeight: 'bold',
     marginLeft: 30
@@ -93,5 +109,21 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     width: 135,
     height: 166,
+  },
+  imageMinBtnNetwork: {
+    marginLeft: 30,
+    height:65.95,
+    width:163
+  },
+  imageMinBtnBbs:{
+    marginLeft:30,
+    height:68,
+    width: 143
+  },
+  imageMinBtnPedemic:{
+    marginTop:10,
+    marginLeft:30,
+    height:68,
+    width:178
   }
 });
