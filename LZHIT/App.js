@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Card } from 'react-native-shadow-cards';
 
@@ -22,19 +22,19 @@ export default class App extends Component {
         <Card style={styles.comCard}>
           <Text style={styles.comCardText}>教务相关</Text>
           <View style={styles.comCardView}>
-            <TouchableOpacity onPress={() => { navigation.navigate('Jwxt') }}>
+            <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
               <View style={styles.funcView}>
                 <Image source={require('./resource/images/jwxt.png')} style={styles.funcIcon} />
                 <Text style={styles.funcIconDesc}>教务系统</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => { Linking.openURL('http://xgxt.lzhit.edu.cn/xsfw/sys/emaphome/portal/index.do') }}>
               <View style={styles.funcView}>
                 <Image source={require('./resource/images/workstation.png')} style={styles.funcIcon} />
                 <Text style={styles.funcIconDesc}>学生工作平台</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => { Linking.openURL('http://mh.lzhit.edu.cn/web/guest')}}>
               <View style={styles.funcView}>
                 <Image source={require('./resource/images/infomation.png')} style={styles.funcIcon} />
                 <Text style={styles.funcIconDesc}>内网信息门户</Text>
@@ -67,7 +67,7 @@ export default class App extends Component {
     Alert.alert('使用前须知', '使用此功能前需要您先手动连接到未认证的校园 WiFi 网络。',
       [
         { text: "返回", onPress: this.confirm },
-        { text: "我已连接", onPress: this.confirm },
+        { text: "我已连接", onPress: () => Linking.openURL('http://10.8.0.253/') },
       ]
     );
   }
@@ -75,7 +75,7 @@ export default class App extends Component {
     Alert.alert('免责申明', '此项服务由第三方 百度-疫情实时大数据报告 提供，默认显示国内疫情，“在鹿山”并不为其数据负责，具体疫情形势请关注官方讯息。',
       [
         { text: "返回", onPress: this.confirm },
-        { text: "我已知晓", onPress: this.confirm },
+        { text: "我已知晓", onPress: () => Linking.openURL('https://voice.baidu.com/act/newpneumonia/newpneumonia') },
       ]
     );
   }
