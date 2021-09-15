@@ -32,14 +32,14 @@ export default class App extends Component {
               校园生活
             </Text>
             <View style={styles.imageBtnArea}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={this.Network.bind(this)}>
                 <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork}/>
               </TouchableOpacity>
               <TouchableOpacity>
                 <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs}/>
               </TouchableOpacity>
-              <TouchableOpacity>
-                <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic  }/>
+              <TouchableOpacity onPress={this.Pedemic.bind(this)}>
+                <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic}/>
               </TouchableOpacity>
             </View>
           </View>
@@ -47,7 +47,7 @@ export default class App extends Component {
       </>
     );
   }
-  showAlert() {
+  Network() {
     Alert.alert('使用前须知', '使用此功能前需要您先手动连接到未认证的校园 WiFi 网络。',
       [
         { text: "返回", onPress: this.confirm },
@@ -55,7 +55,7 @@ export default class App extends Component {
       ]
     );
   }
-  Virus() {
+  Pedemic() {
     Alert.alert('免责申明', '此项服务由第三方 百度-疫情实时大数据报告 提供，默认显示国内疫情，“在鹿山”并不为其数据负责，具体疫情形势请关注官方讯息。',
       [
         { text: "返回", onPress: this.confirm },
