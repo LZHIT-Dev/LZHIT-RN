@@ -70,8 +70,6 @@ const styles = StyleSheet.create({
   titleBar: {
     flex: 2,
     backgroundColor: '#E9E9E9',
-    height: 10,
-
   },
   titleText: {
     fontSize: 40,
