@@ -33,13 +33,13 @@ export default class App extends Component {
             </Text>
             <View style={styles.imageBtnArea}>
               <TouchableOpacity onPress={this.Network.bind(this)}>
-                <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork}/>
+                <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork} />
               </TouchableOpacity>
               <TouchableOpacity>
-                <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs}/>
+                <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs} />
               </TouchableOpacity>
               <TouchableOpacity onPress={this.Pedemic.bind(this)}>
-                <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic}/>
+                <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic} />
               </TouchableOpacity>
             </View>
           </View>
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: '600',
     marginLeft: 30,
-    marginTop: 90
+    marginTop: 70
   },
   hitokoto: {
     marginTop: 20,
@@ -112,18 +112,18 @@ const styles = StyleSheet.create({
   },
   imageMinBtnNetwork: {
     marginLeft: 30,
-    height:65.95,
-    width:163
+    height: 65.95,
+    width: 163
   },
-  imageMinBtnBbs:{
-    marginLeft:30,
-    height:68,
+  imageMinBtnBbs: {
+    marginLeft: 30,
+    height: 68,
     width: 143
   },
-  imageMinBtnPedemic:{
-    marginTop:10,
-    marginLeft:30,
-    height:68,
-    width:178
+  imageMinBtnPedemic: {
+    marginTop: 10,
+    marginLeft: 30,
+    height: 68,
+    width: 178
   }
 });
