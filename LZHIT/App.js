@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Dimensions, Button, Image, AppRegistry} from 'react-native';
-import { color } from 'react-native-elements/dist/helpers';
+import { color, } from 'react-native-elements/dist/helpers';
 import LinearGradient from 'react-native-linear-gradient';
 import { Card } from 'react-native-shadow-cards';
 import {DrawerNavigator,TabNavigator,StackNavigator} from 'react-navigation'
 
-const Apps = () => {
+export default class App extends Component {
+  render() {
     return (
       <View style={styles.container}>
         <StatusBar translucent={true} backgroundColor="transparent" barStyle="light-content" />
@@ -27,7 +28,8 @@ const Apps = () => {
         <Text style={styles.footerText}>应用信息</Text>
       </View>
     );
-};
+  }
+}
 //样式表
 const styles = StyleSheet.create({
   lgs: {
@@ -73,5 +75,3 @@ const styles = StyleSheet.create({
     marginLeft:20
   }
 });
-
-export default Apps;
