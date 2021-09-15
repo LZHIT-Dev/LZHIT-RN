@@ -112,11 +112,13 @@ const styles = StyleSheet.create({
   },
   imageMinBtnNetwork: {
     marginLeft: 30,
+    marginTop: 10,
     height: 65.95,
     width: 163
   },
   imageMinBtnBbs: {
     marginLeft: 30,
+    marginTop: 10,
     height: 68,
     width: 143
   },
