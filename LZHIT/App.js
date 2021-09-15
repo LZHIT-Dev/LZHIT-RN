@@ -7,60 +7,29 @@ export default class App extends Component {
   render() {
     const { navigation } = this.props;
     return (
-      <View style={styles.container}>
-        <StatusBar translucent={true} backgroundColor="transparent" barStyle="light-content" />
-        <LinearGradient
-          start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={['#00c6ff', '#0072ff']} style={styles.lgs} />
-        <View style={styles.block}></View>
+      <>
+      <StatusBar translucent={true} backgroundColor="transparent" barStyle="light-content" />
+      <View style={styles.titleBar}>
         <Text style={styles.titleText}>在鹿山</Text>
-
-        <TouchableOpacity>
-          <Image
-            source={{ uri: 'https://skinit.top/info.png?v=Math.random()' }}
-            style={{ width: 308, height: 65, marginTop: 30 }} />
-        </TouchableOpacity>
-        <Card style={styles.comCard}>
-          <Text style={styles.comCardText}>教务相关</Text>
-          <View style={styles.comCardView}>
-            <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
-              <View style={styles.funcView}>
-                <Image source={require('./resource/images/jwxt.png')} style={styles.funcIcon} />
-                <Text style={styles.funcIconDesc}>教务系统</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => { Linking.openURL('http://xgxt.lzhit.edu.cn/xsfw/sys/emaphome/portal/index.do') }}>
-              <View style={styles.funcView}>
-                <Image source={require('./resource/images/workstation.png')} style={styles.funcIcon} />
-                <Text style={styles.funcIconDesc}>学生工作平台</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => { Linking.openURL('http://mh.lzhit.edu.cn/web/guest')}}>
-              <View style={styles.funcView}>
-                <Image source={require('./resource/images/infomation.png')} style={styles.funcIcon} />
-                <Text style={styles.funcIconDesc}>内网信息门户</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </Card>
-        <Card style={styles.comCard}>
-          <Text style={styles.comCardText}>校园生活</Text>
-          <View style={styles.comCardView}>
-            <TouchableOpacity onPress={this.showAlert.bind(this)}>
-              <View style={styles.funcView}>
-                <Image source={require('./resource/images/connect.png')} style={styles.funcIcon} />
-                <Text style={styles.funcIconDesc}>校园网认证</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={this.Virus.bind(this)}>
-              <View style={styles.funcView}>
-                <Image source={require('./resource/images/num.png')} style={styles.funcIcon} />
-                <Text style={styles.funcIconDesc}>新冠疫情数据</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </Card>
-        <Text style={styles.footerText}>应用信息</Text>
+        <Text style={styles.hitokoto}>这里是一言</Text>
       </View>
+      <View style={styles.bodyContent}>
+        <View style={styles.group1}>
+          <Text style={styles.group1Text}>
+            教务相关
+          </Text>
+          <View style={styles.imageBtnArea}>
+          <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
+          <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn}/>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
+          <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn}/>
+          </TouchableOpacity>
+
+          </View>
+        </View>
+      </View>
+      </>
     );
   }
   showAlert() {
@@ -83,57 +52,47 @@ export default class App extends Component {
 
 //样式表
 const styles = StyleSheet.create({
-  lgs: {
-    width: 1080,
-    height: 85,
-    alignSelf: 'flex-start',
+  titleBar: {
+    flex: 2,
+    backgroundColor: '#E9E9E9',
+    height:10,
+    
   },
-  container: {
-    alignItems: 'center',
-    flex: 1,
-    backgroundColor: '#F5F5F5',
+  titleText:{
+    fontSize:40,
+    fontWeight:'600',
+    marginLeft:30,
+    marginTop: 90
   },
-  block: {
-    height: 30,
+  hitokoto:{
+    marginTop:20,
+    marginLeft:30,
+    fontSize:20,
+    fontWeight:'bold',
+    fontStyle: 'italic',
   },
-  titleText: {
-    marginTop: -65,
-    color: 'white',
-    fontSize: 20,
+  bodyContent: {
+    flex: 5,
+    backgroundColor: '#FFFFFF',
+    borderTopLeftRadius:30,
+    borderTopRightRadius:30,
   },
-  comCard: {
-    marginTop: 20,
+  group1:{
+    marginTop:30,
   },
-  comCardText: {
-    marginTop: 10,
-    marginLeft: 10,
-    marginBottom: 10,
-    fontSize: 13,
-    color: '#696969',
-    fontWeight: 'bold'
+  group1Text:{
+    fontSize:20,
+    fontWeight:'bold',
+    marginLeft:30
   },
-  footerText: {
-    marginTop: 30,
-    fontSize: 12,
-    color: '#C0C0C0',
-  },
-  funcIcon: {
-    width: 50,
-    height: 50,
-  },
-  funcIconDesc: {
-    justifyContent: 'center'
-  },
-  funcView: {
-    marginTop: 5,
-    marginLeft: 30,
-    marginBottom: 20,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  comCardView: {
-    flexDirection: 'row',
+  imageBtnArea:{
+    marginTop:15,
     flexWrap: 'wrap',
-    alignItems: 'center',
+    flexDirection:'row'
+  },
+  imageBtn:{
+    marginLeft:30,
+    width:135,
+    height:166,
   }
 });
