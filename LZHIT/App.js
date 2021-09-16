@@ -12,7 +12,7 @@ export default class App extends Component {
         <ScrollView>
         <View style={styles.titleBar}>
           <Text style={styles.titleText}>在鹿山</Text>
-          <Text style={styles.hitokoto}>这里是一言</Text>
+          <Text style={styles.hitokoto}>当前为 Hummingbird 测试通道</Text>
         </View>
         <View style={styles.bodyBackground}>
           <View style={styles.bodyContent}>
@@ -64,6 +64,7 @@ export default class App extends Component {
                 </TouchableOpacity>
               </View>
             </View>
+            <Text style={{alignSelf:"center",marginTop:20,marginBottom:10,fontSize:12,color:'#E9E9E9'}}>App Ver.1.0.0(Alpha) </Text>
           </View>
         </View>
         </ScrollView>
