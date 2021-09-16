@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking,ScrollView } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
-import { Card } from 'react-native-shadow-cards';
+import { StackNavigator } from 'react-navigation'
+import Jwxt from './page/Jwxt'
 
-export default class App extends Component {
+class App extends Component {
   render() {
-    const { navigation } = this.props;
     return (
       <>
         <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
@@ -24,7 +23,7 @@ export default class App extends Component {
                 <TouchableOpacity onPress={() => { Linking.openURL('http://xgxt.lzhit.edu.cn/xsfw/sys/emaphome/portal/index.do') }}>
                   <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Jwxt')}>
                   <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn} />
                 </TouchableOpacity>
               </View>
@@ -95,6 +94,18 @@ export default class App extends Component {
     );
   }
 }
+
+//StackNavigator
+export default StackNavigator({
+  Home: {
+    screen: App,
+  },
+  Jwxt: {
+    screen: Jwxt,
+  },
+},{
+  headerMode:'None' //隐藏导航栏
+});
 
 //样式表
 const styles = StyleSheet.create({
