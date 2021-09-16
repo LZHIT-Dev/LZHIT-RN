@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking,ScrollView } from 'react-native';
+import { Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView } from 'react-native';
 import { StackNavigator } from 'react-navigation'
-import Jwxt from './page/Jwxt'
+import Jwxt from './page/jwxt'
 import netWork from './page/Network'
 
 class App extends Component {
