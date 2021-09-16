@@ -13,34 +13,36 @@ export default class App extends Component {
           <Text style={styles.titleText}>在鹿山</Text>
           <Text style={styles.hitokoto}>这里是一言</Text>
         </View>
-        <View style={styles.bodyContent}>
-          <View style={styles.group}>
-            <Text style={styles.groupText}>
-              教务相关
-            </Text>
-            <View style={styles.imageBtnArea}>
-              <TouchableOpacity onPress={() => { Linking.openURL('http://xgxt.lzhit.edu.cn/xsfw/sys/emaphome/portal/index.do') }}>
-                <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
-                <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn} />
-              </TouchableOpacity>
+        <View style={styles.bodyBackground}>
+          <View style={styles.bodyContent}>
+            <View style={styles.group}>
+              <Text style={styles.groupText}>
+                教务相关
+              </Text>
+              <View style={styles.imageBtnArea}>
+                <TouchableOpacity onPress={() => { Linking.openURL('http://xgxt.lzhit.edu.cn/xsfw/sys/emaphome/portal/index.do') }}>
+                  <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => { Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/index_initMenu.html#') }}>
+                  <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn} />
+                </TouchableOpacity>
+              </View>
             </View>
-          </View>
-          <View style={styles.group}>
-            <Text style={styles.groupText}>
-              校园生活
-            </Text>
-            <View style={styles.imageBtnArea}>
-              <TouchableOpacity onPress={this.Network.bind(this)}>
-                <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork} />
-              </TouchableOpacity>
-              <TouchableOpacity>
-                <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={this.Pedemic.bind(this)}>
-                <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic} />
-              </TouchableOpacity>
+            <View style={styles.group}>
+              <Text style={styles.groupText}>
+                校园生活
+              </Text>
+              <View style={styles.imageBtnArea}>
+                <TouchableOpacity onPress={this.Network.bind(this)}>
+                  <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={this.Pedemic.bind(this)}>
+                  <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic} />
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </View>
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: '600',
     marginLeft: 30,
-    marginTop: 70
+    marginTop: 110
   },
   hitokoto: {
     marginTop: 20,
@@ -84,8 +86,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontStyle: 'italic',
   },
-  bodyContent: {
+  bodyBackground: {
     flex: 5,
+    backgroundColor: '#E9E9E9',
+  },
+  bodyContent: {
+    flex: 1,
     backgroundColor: '#FFFFFF',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,

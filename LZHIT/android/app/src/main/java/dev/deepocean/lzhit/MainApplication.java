@@ -1,4 +1,4 @@
-package com.lzhit;
+package dev.deepocean.lzhit;
 
 import android.app.Application;
 import android.content.Context;
