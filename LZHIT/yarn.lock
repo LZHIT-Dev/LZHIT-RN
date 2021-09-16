@@ -5488,6 +5488,14 @@ react-native-tab-view@^1.0.0:
   dependencies:
     prop-types "^15.6.1"
 
+react-native-webview-tencentx5@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-webview-tencentx5/-/react-native-webview-tencentx5-1.0.2.tgz#5f343bfaa2a4b6c12bace778985784a552076e74"
+  integrity sha512-czO4X6iRFFSQmqrRRisNMHZR7gUI97tYktRrblim3tHIJohWVMvoVucs+MSZaOx1GUHxNgR2xad1SugvSRWa0g==
+  dependencies:
+    escape-string-regexp "2.0.0"
+    invariant "2.2.4"
+
 react-native-webview@^11.13.0:
   version "11.13.0"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.13.0.tgz#a2eca0f87b2ae9bba0dd8144594aeff9947cc5d6"

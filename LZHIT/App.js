@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking,ScrollView } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import Jwxt from './page/Jwxt'
+import netWork from './page/Network'
 
 class App extends Component {
   render() {
@@ -74,7 +75,7 @@ class App extends Component {
     Alert.alert('使用前须知', '使用此功能前需要您先手动连接到未认证的校园 WiFi 网络。',
       [
         { text: "返回", onPress: this.confirm },
-        { text: "我已连接", onPress: () => Linking.openURL('http://10.8.0.253/') },
+        { text: "我已连接", onPress:() => this.props.navigation.navigate('netWork') },
       ]
     );
   }
@@ -102,6 +103,9 @@ export default StackNavigator({
   },
   Jwxt: {
     screen: Jwxt,
+  },
+  netWork: {
+    screen: netWork,
   },
 },{
   headerMode:'None' //隐藏导航栏

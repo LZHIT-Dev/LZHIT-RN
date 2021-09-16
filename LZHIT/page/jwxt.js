@@ -5,7 +5,7 @@ import { WebView } from 'react-native-webview';
 const statusBarHeight = StatusBar.currentHeight;
 
 const Jwxt = () => {
-    const [url, setUrl] = useState('http://www.baidu.com');
+    const [url, setUrl] = useState('http://jwglxt.lzhit.edu.cn/jwglxt');
     const [webView, setWebview] = useState(null);
     const [urlInput, setUrlInput] = useState(url);
 
@@ -43,12 +43,13 @@ const Jwxt = () => {
             </View>
             <WebView source={{ uri: url }}
                 injectedJavaScript={`
-                var aNodes = document.getElementsByTagName('a');
-
-                for (var i = 0; i < aNodes.length; i++) {
-                    aNodes[i].addEventListener('click', function (e) {
-                       e.preventDefault();
-                   })
+                window.onload = function() {
+                    var tags = document.getElementsByTagName("a");
+                    for(var i = 0; i < tags.length; i++) {
+                        tags[i].addEventListener('click', function (e) {
+                            if(e.href.indexOf("forward.action") != -1) e.preventDefault();
+                        })
+                    };
                 }
             `}
                 ref={(webView) => (setWebview(webView))}
