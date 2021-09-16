@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking,ScrollView } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Card } from 'react-native-shadow-cards';
 
@@ -8,7 +8,8 @@ export default class App extends Component {
     const { navigation } = this.props;
     return (
       <>
-        <StatusBar translucent={true} backgroundColor="transparent" barStyle="light-content" />
+        <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
+        <ScrollView>
         <View style={styles.titleBar}>
           <Text style={styles.titleText}>在鹿山</Text>
           <Text style={styles.hitokoto}>这里是一言</Text>
@@ -32,20 +33,40 @@ export default class App extends Component {
               <Text style={styles.groupText}>
                 校园生活
               </Text>
-              <View style={styles.imageBtnArea}>
+              <View style={styles.imageBtnArea2}>
                 <TouchableOpacity onPress={this.Network.bind(this)}>
                   <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork} />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={this.Bbs.bind(this)}>
                   <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={this.Pedemic.bind(this)}>
                   <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic} />
                 </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image source={require('./resource/images/libCheck.png')} style={styles.imageMinBtnLibCheck} />
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View style={styles.group}>
+              <Text style={styles.groupText}>
+                更多
+              </Text>
+              <View style={styles.imageBtnArea2}>
+                <TouchableOpacity>
+                  <Image source={require('./resource/images/share.png')} style={styles.imageMinBtnShare}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image source={require('./resource/images/setting.png')} style={styles.imageMinBtnSetting}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image source={require('./resource/images/sponsor.png')} style={styles.imageMinBtnSponsor}/>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
         </View>
+        </ScrollView>
       </>
     );
   }
@@ -62,6 +83,13 @@ export default class App extends Component {
       [
         { text: "返回", onPress: this.confirm },
         { text: "我已知晓", onPress: () => Linking.openURL('https://voice.baidu.com/act/newpneumonia/newpneumonia') },
+      ]
+    );
+  }
+  Bbs() {
+    Alert.alert('暂未开放', '树洞社区暂未开放，感谢关注。',
+      [
+        { text: "知道了", onPress: this.confirm }
       ]
     );
   }
@@ -82,6 +110,7 @@ const styles = StyleSheet.create({
   hitokoto: {
     marginTop: 20,
     marginLeft: 30,
+    marginBottom:20,
     fontSize: 20,
     fontWeight: 'bold',
     fontStyle: 'italic',
@@ -107,7 +136,12 @@ const styles = StyleSheet.create({
   imageBtnArea: {
     marginTop: 15,
     flexWrap: 'wrap',
-    flexDirection: 'row'
+    flexDirection: 'row',
+  },
+  imageBtnArea2: {
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    marginBottom:10
   },
   imageBtn: {
     marginLeft: 30,
@@ -131,5 +165,29 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     height: 68,
     width: 178
+  },
+  imageMinBtnLibCheck:{
+    marginTop: 10,
+    marginLeft: 30,
+    height: 68,
+    width: 196
+  },
+  imageMinBtnShare: {
+    width: 160,
+    height: 65.54,
+    marginTop: 10,
+    marginLeft: 30,
+  },
+  imageMinBtnSetting: {
+    width: 106,
+    height: 67.27,
+    marginTop: 10,
+    marginLeft: 30,
+  },
+  imageMinBtnSponsor: {
+    width: 142,
+    height: 66.94,
+    marginTop: 10,
+    marginLeft: 30,
   }
 });
