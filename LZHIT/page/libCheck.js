@@ -4,8 +4,8 @@ import { WebView } from 'react-native-webview';
 
 const statusBarHeight = StatusBar.currentHeight;
 
-const netWork = () => {
-    const [url, setUrl] = useState('http://10.8.0.253/');
+const libCheck = () => {
+    const [url, setUrl] = useState('http://agentdockingopac.featurelib.libsou.com/showhome/search/showSearch?schoolId=8295');
     const [webView, setWebview] = useState(null);
     const [urlInput, setUrlInput] = useState(url);
 
@@ -49,7 +49,7 @@ const netWork = () => {
                 onMessage={onMessage}
                 onError={syntheticEvent => {
                     const { nativeEvent } = syntheticEvent;
-                    console.log('校园网登陆页面加载失败！请确认是否已连上校园网 WiFi。');
+                    console.log('网络连接失败！');
                     console.warn('WebView error: ', nativeEvent);
                 }}
             />
@@ -71,4 +71,4 @@ const netWork = () => {
 const styles = StyleSheet.create({
 });
 
-export default netWork;
+export default libCheck;

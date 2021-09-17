@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SafeAreaView, StyleSheet, Text, View, StatusBar, TouchableOpacity, Image, TextInput, Button } from 'react-native';
+import { SafeAreaView, StyleSheet, View, StatusBar, TouchableOpacity, Image, TextInput, Button } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 const statusBarHeight = StatusBar.currentHeight;

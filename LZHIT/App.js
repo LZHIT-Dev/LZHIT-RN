@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Link
 import { StackNavigator } from 'react-navigation'
 import Jwxt from './page/jwxt'
 import netWork from './page/Network'
+import libCheck from './page/libCheck';
 
 class App extends Component {
   render() {
@@ -43,7 +44,7 @@ class App extends Component {
                 <TouchableOpacity onPress={this.Pedemic.bind(this)}>
                   <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic} />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('libCheck')}>
                   <Image source={require('./resource/images/libCheck.png')} style={styles.imageMinBtnLibCheck} />
                 </TouchableOpacity>
               </View>
@@ -106,6 +107,9 @@ export default StackNavigator({
   },
   netWork: {
     screen: netWork,
+  },
+  libCheck: {
+    screen: libCheck,
   },
 },{
   headerMode:'None' //隐藏导航栏
