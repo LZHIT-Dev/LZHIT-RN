@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import Jwxt from './page/jwxt'
 import netWork from './page/Network'
