@@ -29,21 +29,18 @@ const xgxt = () => {
         }
         console.log(minLog);
     };
-
-    let jsCode = `(
-        var aNodes = document.getElementsByTagName('a');
-
-for (var i = 0; i < aNodes.length; i++) {
-    aNodes[i].addEventListener('click', function (e) {
-       e.preventDefault();
-   })
-}
-    )`;
+    let yourAlert = `
+    function a_replace(){//替换a标签中的内容
+        var a=document.getElementsByTagName("a");
+        for(var i=0;i<a.length;i++)
+            a[i].href=a[i].href.replace('flag','www.baidu.com');
+        }
+    `
     return (
         <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
             <WebView source={{ uri: url }}
                 javaScriptEnabledAndroid={true}
-                injectJavaScript={jsCode}
+                injectedJavaScript={yourAlert}
                 ref={(webView) => (setWebview(webView))}
                 sharedCookiesEnabled={true}
                 startInLoadingState={true}

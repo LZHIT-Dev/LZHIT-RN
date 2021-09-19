@@ -6,7 +6,7 @@ import netWork from './page/Network'
 import libCheck from './page/libCheck';
 import szym from './page/szym'
 import xgxt from './page/xgxt';
-import peDemic from './page/pedemic';
+import thePedemic from './page/pedemic';
 
 const userShare = async () => {
   Share.share({
@@ -98,7 +98,7 @@ class App extends Component {
     Alert.alert('免责申明', '此项服务由第三方 百度-疫情实时大数据报告 提供，默认显示国内疫情，“在鹿山”并不为其数据负责，具体疫情形势请关注官方讯息。',
       [
         { text: "返回", onPress: this.confirm },
-        { text: "我已知晓", onPress: () => this.props.navigation.navigate('peDemic')},
+        { text: "我已知晓", onPress: () => this.props.navigation.navigate('thePedemic')},
       ]
     );
   }
@@ -130,6 +130,9 @@ export default StackNavigator({
   },
   xgxt: {
     screen: xgxt,
+  },
+  thePedemic: {
+    screen: thePedemic,
   }
 },{
   headerMode:'None' //隐藏导航栏

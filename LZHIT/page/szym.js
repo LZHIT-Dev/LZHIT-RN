@@ -13,11 +13,11 @@ const szym = () => {
           <View style={styles.bodyBackground}>
             <View style={styles.bodyContent}>
               <View style={styles.optionGroup}>
-                <TouchableOpacity style={styles.optionTextGroup}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://manual.inlushan.top/')}>
                   <Text style={styles.optionText}>使用协议</Text>
                   <Text style={styles.optionTextDescript}>使用前必看</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://manual.inlushan.top/yin-si-shen-ming')}>
                   <Text style={styles.optionText}>隐私申明</Text>
                   <Text style={styles.optionTextDescript}>该应用不会收集你的任何信息哦，请放心使用。</Text>
                   <Text style={styles.optionTextDescript}>(*/ω＼*)</Text>
@@ -26,7 +26,7 @@ const szym = () => {
                   <Text style={styles.optionText}>检查更新</Text>
                   <Text style={styles.optionTextDescript}>将前往 <Text style={{color:'#0f9d58'}}>酷安</Text> 进行检查更新</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://manual.inlushan.top/ying-yong-quan-xian')}>
                   <Text style={styles.optionText}>权限</Text>
                   <Text style={styles.optionTextDescript}>点击了解此应用需要什么权限</Text>
                 </TouchableOpacity>
@@ -38,7 +38,7 @@ const szym = () => {
                 <TouchableOpacity style={styles.optionTextGroup}>
                   <Text style={styles.optionText}>特别鸣谢</Text>
                   <Text style={styles.optionTextDescript}>感谢以下同学的帮助，让此应用能够更加完善：</Text>
-                  <Text style={styles.optionTextDescript}>@憨憨的熊、@汐乱情秋君、@熠櫆、@刘处长、@Rominwolf</Text>
+                  <Text style={styles.optionTextDescript}>@憨憨的熊、@汐乱情秋君、@熠櫆、@刘处长、@Rominwolf、@小白</Text>
                   <Text style={styles.optionTextDescript}>（排名不分先后）</Text>
                 </TouchableOpacity>
               </View>

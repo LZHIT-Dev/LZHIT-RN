@@ -4,7 +4,7 @@ import { WebView } from 'react-native-webview';
 
 const statusBarHeight = StatusBar.currentHeight;
 
-const peDemic = () => {
+const thePedemic = () => {
     const [url, setUrl] = useState('https://voice.baidu.com/act/newpneumonia/newpneumonia');
     const [webView, setWebview] = useState(null);
     const [urlInput, setUrlInput] = useState(url);
@@ -71,4 +71,4 @@ const peDemic = () => {
 const styles = StyleSheet.create({
 });
 
-export default peDemic;
+export default thePedemic;
