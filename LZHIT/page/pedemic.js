@@ -4,8 +4,8 @@ import { WebView } from 'react-native-webview';
 
 const statusBarHeight = StatusBar.currentHeight;
 
-const libCheck = () => {
-    const [url, setUrl] = useState('http://agentdockingopac.featurelib.libsou.com/showhome/search/showSearch?schoolId=8295');
+const peDemic = () => {
+    const [url, setUrl] = useState('https://voice.baidu.com/act/newpneumonia/newpneumonia');
     const [webView, setWebview] = useState(null);
     const [urlInput, setUrlInput] = useState(url);
 
@@ -29,17 +29,19 @@ const libCheck = () => {
         }
         console.log(minLog);
     };
-    let script = `var tags = document.querySelectorAll('a');
-    Array.prototype.forEach.call(tags, function (tag) {
-        tag.addEventListener('click', function () {
-    console.log("into the " + this.href);
-            if(this.href.indexOf("forward.action") != -1) this.preventDefault();
-        })
-    })`;
     return (
         <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
             <WebView source={{ uri: url }}
-                injectedJavaScript={script}
+                injectedJavaScript={`
+                window.onload = function() {
+                    var tags = document.getElementsByTagName("a");
+                    for(var i = 0; i < tags.length; i++) {
+                        tags[i].addEventListener('click', function (e) {
+                            if(e.href.indexOf("forward.action") != -1) e.preventDefault();
+                        })
+                    };
+                }
+            `}
                 ref={(webView) => (setWebview(webView))}
                 sharedCookiesEnabled={true}
                 startInLoadingState={true}
@@ -69,4 +71,4 @@ const libCheck = () => {
 const styles = StyleSheet.create({
 });
 
-export default libCheck;
+export default peDemic;

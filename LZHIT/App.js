@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView, Share } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import Jwxt from './page/jwxt'
 import netWork from './page/Network'
 import libCheck from './page/libCheck';
-import szym from './page/szym';
+import szym from './page/szym'
+import xgxt from './page/xgxt';
+import peDemic from './page/pedemic';
+
+const userShare = async () => {
+  Share.share({
+    message:'我在使用【在鹿山】App，每位柳工院学子都不可或缺的校园生活App！下载地址：inlushan.top',
+    title:'【在鹿山】App', //Android
+    Content:'我在使用【在鹿山】App，每位柳工院学子都不可或缺的校园生活App！下载地址：inlushan.top', //Android/iOS
+    url:'inlushan.top' //iOS
+  },{
+    dialogTitle:'描述的标题'
+  })
+}
 
 class App extends Component {
   render() {
@@ -23,7 +36,7 @@ class App extends Component {
                 教务相关
               </Text>
               <View style={styles.imageBtnArea}>
-                <TouchableOpacity onPress={() => { Linking.openURL('http://xgxt.lzhit.edu.cn/xsfw/sys/emaphome/portal/index.do') }}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('xgxt')}>
                   <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('Jwxt')}>
@@ -55,13 +68,13 @@ class App extends Component {
                 更多
               </Text>
               <View style={styles.imageBtnArea2}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => userShare()}>
                   <Image source={require('./resource/images/share.png')} style={styles.imageMinBtnShare}/>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('szym')}>
                   <Image source={require('./resource/images/setting.png')} style={styles.imageMinBtnSetting}/>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => Linking.openURL('https://afdian.net/@tien0422/plan')}>
                   <Image source={require('./resource/images/sponsor.png')} style={styles.imageMinBtnSponsor}/>
                 </TouchableOpacity>
               </View>
@@ -85,7 +98,7 @@ class App extends Component {
     Alert.alert('免责申明', '此项服务由第三方 百度-疫情实时大数据报告 提供，默认显示国内疫情，“在鹿山”并不为其数据负责，具体疫情形势请关注官方讯息。',
       [
         { text: "返回", onPress: this.confirm },
-        { text: "我已知晓", onPress: () => Linking.openURL('https://voice.baidu.com/act/newpneumonia/newpneumonia') },
+        { text: "我已知晓", onPress: () => this.props.navigation.navigate('peDemic')},
       ]
     );
   }
@@ -114,6 +127,9 @@ export default StackNavigator({
   },
   szym: {
     screen: szym,
+  },
+  xgxt: {
+    screen: xgxt,
   }
 },{
   headerMode:'None' //隐藏导航栏

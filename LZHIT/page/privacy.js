@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Link
 import { StackNavigator, createStackNavigator  } from 'react-navigation'
 import szym from './szym';
 
-class privacy extends Component {
+class privacy extends React.Component {
   render() {
     return (
       <>

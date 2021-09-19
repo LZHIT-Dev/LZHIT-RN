@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView } from 'react-native';
 import { StackNavigator } from 'react-navigation'
-import App from '../App';
 
-class szym extends Component {
-  render() {
+const szym = () => {
     return (
       <>
         <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
         <ScrollView>
           <View style={styles.titleBar}>
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('App')}>
-              <Image source={require('../resource/images/backBtn.png')} style={{ width: 30, height: 25, marginTop: 110, marginLeft: 20 }} />
-            </TouchableOpacity>
             <Text style={styles.titleText}>设置</Text>
             <Text style={styles.hitokoto}>这里也许有你想了解的</Text>
           </View>
@@ -23,7 +18,7 @@ class szym extends Component {
                   <Text style={styles.optionText}>使用协议</Text>
                   <Text style={styles.optionTextDescript}>使用前必看</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup} onPress={() => this.props.navigation.navigate('privacy')}>
+                <TouchableOpacity style={styles.optionTextGroup}>
                   <Text style={styles.optionText}>隐私申明</Text>
                   <Text style={styles.optionTextDescript}>软件不会收集你的任何信息哦，请放心使用。</Text>
                   <Text style={styles.optionTextDescript}>(*/ω＼*)</Text>
@@ -49,19 +44,6 @@ class szym extends Component {
       </>
     );
   }
-}
-
-//StackNavigator
-export default StackNavigator({
-  Home: {
-    screen: szym,
-  },
-  App: {
-    screen: App,
-  },
-}, {
-  headerMode: 'None' //隐藏导航栏
-});
 
 const styles = StyleSheet.create({
   titleBar: {
@@ -72,7 +54,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: '600',
     marginLeft: 30,
-    marginTop: 30
+    marginTop: 110
   },
   hitokoto: {
     marginTop: 20,
@@ -107,3 +89,4 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
 })
+export default szym;
