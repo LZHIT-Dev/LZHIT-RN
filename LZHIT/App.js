@@ -79,7 +79,7 @@ class App extends Component {
                 </TouchableOpacity>
               </View>
             </View>
-            <Text style={{alignSelf:"center",marginTop:20,marginBottom:10,fontSize:12,color:'#E9E9E9'}}>App Ver.1.0.0(Alpha) </Text>
+            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.1.0.0(Alpha) </Text>
           </View>
         </View>
         </ScrollView>

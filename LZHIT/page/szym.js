@@ -38,7 +38,7 @@ const szym = () => {
                 <TouchableOpacity style={styles.optionTextGroup}>
                   <Text style={styles.optionText}>特别鸣谢</Text>
                   <Text style={styles.optionTextDescript}>感谢以下同学的帮助，让此应用能够更加完善：</Text>
-                  <Text style={styles.optionTextDescript}>@憨憨的熊、@汐乱情秋君、@熠櫆</Text>
+                  <Text style={styles.optionTextDescript}>@憨憨的熊、@汐乱情秋君、@熠櫆、@刘处长、@Rominwolf</Text>
                   <Text style={styles.optionTextDescript}>（排名不分先后）</Text>
                 </TouchableOpacity>
               </View>

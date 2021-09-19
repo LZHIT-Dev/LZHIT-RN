@@ -29,19 +29,21 @@ const xgxt = () => {
         }
         console.log(minLog);
     };
+
+    let jsCode = `(
+        var aNodes = document.getElementsByTagName('a');
+
+for (var i = 0; i < aNodes.length; i++) {
+    aNodes[i].addEventListener('click', function (e) {
+       e.preventDefault();
+   })
+}
+    )`;
     return (
         <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
             <WebView source={{ uri: url }}
-                injectedJavaScript={`
-                window.onload = function() {
-                    var tags = document.getElementsByTagName("a");
-                    for(var i = 0; i < tags.length; i++) {
-                        tags[i].addEventListener('click', function (e) {
-                            if(e.href.indexOf("forward.action") != -1) e.preventDefault();
-                        })
-                    };
-                }
-            `}
+                javaScriptEnabledAndroid={true}
+                injectJavaScript={jsCode}
                 ref={(webView) => (setWebview(webView))}
                 sharedCookiesEnabled={true}
                 startInLoadingState={true}
