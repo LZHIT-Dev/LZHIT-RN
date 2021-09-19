@@ -24,7 +24,7 @@ const szym = () => {
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://www.coolapk.com/apk/dev.deepocean.lzhit')}>
                   <Text style={styles.optionText}>检查更新</Text>
-                  <Text style={styles.optionTextDescript}>将前往 <Text style={{fontWeight:'200',color:'#0f9d58'}}>酷安</Text> 进行检查更新</Text>
+                  <Text style={styles.optionTextDescript}>将前往 <Text style={{color:'#0f9d58'}}>酷安</Text> 进行检查更新</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.optionTextGroup}>
                   <Text style={styles.optionText}>权限</Text>
