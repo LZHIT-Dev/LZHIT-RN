@@ -4,6 +4,7 @@ import { StackNavigator } from 'react-navigation'
 import Jwxt from './page/jwxt'
 import netWork from './page/Network'
 import libCheck from './page/libCheck';
+import szym from './page/szym';
 
 class App extends Component {
   render() {
@@ -57,7 +58,7 @@ class App extends Component {
                 <TouchableOpacity>
                   <Image source={require('./resource/images/share.png')} style={styles.imageMinBtnShare}/>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('szym')}>
                   <Image source={require('./resource/images/setting.png')} style={styles.imageMinBtnSetting}/>
                 </TouchableOpacity>
                 <TouchableOpacity>
@@ -111,6 +112,9 @@ export default StackNavigator({
   libCheck: {
     screen: libCheck,
   },
+  szym: {
+    screen: szym,
+  }
 },{
   headerMode:'None' //隐藏导航栏
 });
