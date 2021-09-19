@@ -27,7 +27,7 @@ class App extends Component {
         <ScrollView>
         <View style={styles.titleBar}>
           <Text style={styles.titleText}>在鹿山</Text>
-          <Text style={styles.hitokoto}>当前为 Hummingbird 测试通道</Text>
+          <Text style={styles.hitokoto}>同学，你好！</Text>
         </View>
         <View style={styles.bodyBackground}>
           <View style={styles.bodyContent}>
