@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView } from 'react-native';
-import { StackNavigator } from 'react-navigation'
 
 const szym = () => {
     return (
@@ -20,25 +19,31 @@ const szym = () => {
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.optionTextGroup}>
                   <Text style={styles.optionText}>隐私申明</Text>
-                  <Text style={styles.optionTextDescript}>软件不会收集你的任何信息哦，请放心使用。</Text>
+                  <Text style={styles.optionTextDescript}>该应用不会收集你的任何信息哦，请放心使用。</Text>
                   <Text style={styles.optionTextDescript}>(*/ω＼*)</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://www.coolapk.com/apk/dev.deepocean.lzhit')}>
                   <Text style={styles.optionText}>检查更新</Text>
-                  <Text style={styles.optionTextDescript}>将前往 酷安 进行检查更新</Text>
+                  <Text style={styles.optionTextDescript}>将前往 <Text style={{fontWeight:'200',color:'#0f9d58'}}>酷安</Text> 进行检查更新</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.optionTextGroup}>
                   <Text style={styles.optionText}>权限</Text>
-                  <Text style={styles.optionTextDescript}>点击了解这个软件需要什么权限</Text>
+                  <Text style={styles.optionTextDescript}>点击了解此应用需要什么权限</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('mailto:tzh894895@gmail.com')}>
+                  <Text style={styles.optionText}>关于作者</Text>
+                  <Text style={styles.optionTextDescript}>©木辛恒同学</Text>
+                  <Text style={styles.optionTextDescript}>邮箱：tzh894895@gmail.com</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.optionTextGroup}>
-                  <Text style={styles.optionText}>版本信息</Text>
-                  <Text style={styles.optionTextDescript}>AppVer.1.0.0</Text>
-                  <Text style={styles.optionTextDescript}>Channel Stable</Text>
+                  <Text style={styles.optionText}>特别鸣谢</Text>
+                  <Text style={styles.optionTextDescript}>感谢以下同学的帮助，让此应用能够更加完善：</Text>
+                  <Text style={styles.optionTextDescript}>@憨憨的熊、@汐乱情秋君、@熠櫆</Text>
+                  <Text style={styles.optionTextDescript}>（排名不分先后）</Text>
                 </TouchableOpacity>
               </View>
-              <Text style={{ alignSelf: "center", marginTop: 20, marginBottom: 10, fontSize: 12, color: '#E9E9E9' }}>App Ver.1.0.0(Alpha) </Text>
             </View>
+            <Text style={{ alignSelf: "center", marginBottom: 50, fontSize: 12, color: '#808080',fontWeight:'bold' }}>- 感谢正在使用的你 -</Text>
           </View>
         </ScrollView>
       </>
@@ -75,6 +80,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
+    marginBottom:30
   },
   optionGroup: {
     marginTop: 30,
