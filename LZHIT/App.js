@@ -10,12 +10,12 @@ import peDemic from './page/pedemic';
 
 const userShare = async () => {
   Share.share({
-    message:'我在使用【在鹿山】App，每位柳工院学子都不可或缺的校园生活App！下载地址：inlushan.top',
+    message:'我在使用【在鹿山】App，每位柳工院学子都值得拥有的校园生活App！下载地址：inlushan.top',
     title:'【在鹿山】App', //Android
-    Content:'我在使用【在鹿山】App，每位柳工院学子都不可或缺的校园生活App！下载地址：inlushan.top', //Android/iOS
+    Content:'我在使用【在鹿山】App，每位柳工院学子都值得拥有的校园生活App！下载地址：inlushan.top', //Android/iOS
     url:'inlushan.top' //iOS
   },{
-    dialogTitle:'描述的标题'
+    dialogTitle:'向好友分享【在鹿山】App'
   })
 }
 
