@@ -3740,6 +3740,11 @@ istanbul-reports@^3.0.2:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
+jcore-react-native@^1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/jcore-react-native/-/jcore-react-native-1.9.4.tgz#d745b1ad73d1787ccd5d2a137e09b943d17b7a82"
+  integrity sha512-QH3YPjirvjnOH0k+orj1ZsZSLxc3rcSnAV2TScOFITVp4LXTvZgrrhjpjiZQcAtkyxFFyrVEMddHCtu2WhH1GA==
+
 jest-changed-files@^26.6.2:
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-26.6.2.tgz#f6198479e1cc66f22f9ae1e22acaa0b429c042d0"

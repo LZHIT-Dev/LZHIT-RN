@@ -29,17 +29,18 @@ const netWork = () => {
         }
         console.log(minLog);
     };
-    let script = `var tags = document.querySelectorAll('a');
-    Array.prototype.forEach.call(tags, function (tag) {
-        tag.addEventListener('click', function () {
-    console.log("into the " + this.href);
-            if(this.href.indexOf("forward.action") != -1) this.preventDefault();
-        })
-    })`;
+    let placeTag = `var aNodes = document.getElementsByTagName('a');
+
+    for (var i = 0; i < aNodes.length; i++) {
+        aNodes[i].addEventListener('click', function (e) {
+           e.preventDefault();
+       })
+    }`
     return (
         <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
+            <StatusBar translucent={true} backgroundColor="#1bb3ac" barStyle="light-content" />
             <WebView source={{ uri: url }}
-                injectedJavaScript={script}
+                injectJavaScript={placeTag}
                 ref={(webView) => (setWebview(webView))}
                 sharedCookiesEnabled={true}
                 startInLoadingState={true}

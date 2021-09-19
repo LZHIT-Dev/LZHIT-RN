@@ -29,18 +29,12 @@ const xgxt = () => {
         }
         console.log(minLog);
     };
-    let yourAlert = `
-    function a_replace(){//替换a标签中的内容
-        var a=document.getElementsByTagName("a");
-        for(var i=0;i<a.length;i++)
-            a[i].href=a[i].href.replace('flag','www.baidu.com');
-        }
-    `
+    let placeTag = `function a_replace(){var a=document.getElementsByTagName("a");for(var i=0;i<a.length;i++)a[i].href=a[i].href.replace('flag','www.better.net/flog');}a_replace();`
     return (
         <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
             <WebView source={{ uri: url }}
                 javaScriptEnabledAndroid={true}
-                injectedJavaScript={yourAlert}
+                injectedJavaScript={placeTag}
                 ref={(webView) => (setWebview(webView))}
                 sharedCookiesEnabled={true}
                 startInLoadingState={true}
