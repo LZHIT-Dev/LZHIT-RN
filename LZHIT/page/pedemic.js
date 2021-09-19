@@ -31,6 +31,7 @@ const thePedemic = () => {
     };
     return (
         <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
+            <StatusBar translucent={true} backgroundColor="#10aeb5" barStyle="light-content" />
             <WebView source={{ uri: url }}
                 injectedJavaScript={`
                 window.onload = function() {

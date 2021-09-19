@@ -29,16 +29,10 @@ const netWork = () => {
         }
         console.log(minLog);
     };
-    let placeTag = `var aNodes = document.getElementsByTagName('a');
-
-    for (var i = 0; i < aNodes.length; i++) {
-        aNodes[i].addEventListener('click', function (e) {
-           e.preventDefault();
-       })
-    }`
+    let placeTag = `var aNodes=document.getElementsByTagName("a");for(var i=0;i<aNodes.length;i++){aNodes[i].addEventListener("click",function(e){e.preventDefault()})};`
     return (
         <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
-            <StatusBar translucent={true} backgroundColor="#1bb3ac" barStyle="light-content" />
+            <StatusBar translucent={true} backgroundColor="#0483d4" barStyle="light-content" />
             <WebView source={{ uri: url }}
                 injectJavaScript={placeTag}
                 ref={(webView) => (setWebview(webView))}
