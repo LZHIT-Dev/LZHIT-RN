@@ -36,10 +36,10 @@ class App extends Component {
                 教务相关
               </Text>
               <View style={styles.imageBtnArea}>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('xgxt')}>
+                <TouchableOpacity onPress={() => Linking.openURL('http://xgxt.lzhit.edu.cn/xsfw/sys/emaphome/portal/index.do')}>
                   <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('Jwxt')}>
+                <TouchableOpacity onPress={() => Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/')}>
                   <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn} />
                 </TouchableOpacity>
               </View>
