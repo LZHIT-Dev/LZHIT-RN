@@ -22,7 +22,7 @@ const szym = () => {
                   <Text style={styles.optionTextDescript}>该应用不会收集你的任何信息哦，请放心使用。</Text>
                   <Text style={styles.optionTextDescript}>(*/ω＼*)</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://www.coolapk.com/apk/dev.deepocean.lzhit')}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://www.coolapk.com/apk/288034')}>
                   <Text style={styles.optionText}>检查更新</Text>
                   <Text style={styles.optionTextDescript}>将前往 <Text style={{color:'#0f9d58'}}>酷安</Text> 进行检查更新</Text>
                 </TouchableOpacity>
