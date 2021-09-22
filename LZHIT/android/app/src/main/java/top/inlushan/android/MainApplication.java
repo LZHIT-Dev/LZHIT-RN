@@ -1,4 +1,4 @@
-package dev.deepocean.lzhit;
+package top.inlushan.android;
 
 import android.app.Application;
 import android.content.Context;

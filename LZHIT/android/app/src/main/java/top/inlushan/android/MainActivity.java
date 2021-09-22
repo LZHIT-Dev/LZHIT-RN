@@ -1,4 +1,4 @@
-package dev.deepocean.lzhit;
+package top.inlushan.android;
 
 import com.facebook.react.ReactActivity;
 
