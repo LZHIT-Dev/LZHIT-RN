@@ -7,6 +7,7 @@ import libCheck from './page/libCheck';
 import szym from './page/szym'
 import xgxt from './page/xgxt';
 import thePedemic from './page/pedemic';
+import topInfoJump from './page/topinfojump';
 
 const userShare = async () => {
   Share.share({
@@ -31,6 +32,16 @@ class App extends Component {
         </View>
         <View style={styles.bodyBackground}>
           <View style={styles.bodyContent}>
+            <View style={styles.group}>
+              <Text style={styles.groupText}>
+                置顶信息
+              </Text>
+              <View style={styles.topImageBtnArea}>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('libCheck')}>
+                  <Image source={{uri:'https://api-serv.tzih.top/lzhit/topInfo.png'}} style={styles.topImageBtn} />
+                </TouchableOpacity>
+              </View>
+            </View>
             <View style={styles.group}>
               <Text style={styles.groupText}>
                 教务相关
@@ -133,6 +144,9 @@ export default StackNavigator({
   },
   thePedemic: {
     screen: thePedemic,
+  },
+  topInfoJump: {
+    screen: topInfoJump,
   }
 },{
   headerMode:'None' //隐藏导航栏
@@ -185,6 +199,14 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     flexDirection: 'row',
     marginBottom:10
+  },
+  topImageBtnArea: {
+    marginTop: 15,
+  },
+  topImageBtn: {
+    width: 300,
+    height: 166,
+    marginLeft:30,
   },
   imageBtn: {
     marginLeft: 30,
