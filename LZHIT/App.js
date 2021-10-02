@@ -8,6 +8,7 @@ import szym from './page/szym'
 import xgxt from './page/xgxt';
 import thePedemic from './page/pedemic';
 import topInfoJump from './page/topinfojump';
+import afdian from './page/afdian';
 
 const userShare = async () => {
   Share.share({
@@ -85,7 +86,7 @@ class App extends Component {
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('szym')}>
                   <Image source={require('./resource/images/setting.png')} style={styles.imageMinBtnSetting}/>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL('https://afdian.net/@tien0422/plan')}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('afdian')}>
                   <Image source={require('./resource/images/sponsor.png')} style={styles.imageMinBtnSponsor}/>
                 </TouchableOpacity>
               </View>
@@ -147,6 +148,9 @@ export default StackNavigator({
   },
   topInfoJump: {
     screen: topInfoJump,
+  },
+  afdian: {
+    screen: afdian,
   }
 },{
   headerMode:'None' //隐藏导航栏
