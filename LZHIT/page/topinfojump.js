@@ -31,7 +31,7 @@ const topInfoJump = () => {
     };
     return (
         <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
-            <StatusBar translucent={true} backgroundColor="transparent" barStyle="light-content" />
+            <StatusBar translucent={true} backgroundColor="#ffffff" barStyle="dark-content" />
             <WebView source={{ uri: url }}
                 injectedJavaScript={`
                 window.onload = function() {
