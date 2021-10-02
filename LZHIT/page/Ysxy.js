@@ -4,8 +4,8 @@ import { WebView } from 'react-native-webview';
 
 const statusBarHeight = StatusBar.currentHeight;
 
-const topInfoJump = () => {
-    const [url, setUrl] = useState('https://bridge.inlushan.top/topInfo.html');
+const Ysxy = () => {
+    const [url, setUrl] = useState('https://manual.inlushan.top/yin-si-shen-ming');
     const [webView, setWebview] = useState(null);
     const [urlInput, setUrlInput] = useState(url);
 
@@ -29,20 +29,18 @@ const topInfoJump = () => {
         }
         console.log(minLog);
     };
+    let script = `var tags = document.querySelectorAll('a');
+    Array.prototype.forEach.call(tags, function (tag) {
+        tag.addEventListener('click', function () {
+    console.log("into the " + this.href);
+            if(this.href.indexOf("forward.action") != -1) this.preventDefault();
+        })
+    })`;
     return (
         <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
-            <StatusBar translucent={true} backgroundColor="transparent" barStyle="light-content" />
+            <StatusBar translucent={true} backgroundColor="#ffffff" barStyle="dark-content" />
             <WebView source={{ uri: url }}
-                injectedJavaScript={`
-                window.onload = function() {
-                    var tags = document.getElementsByTagName("a");
-                    for(var i = 0; i < tags.length; i++) {
-                        tags[i].addEventListener('click', function (e) {
-                            if(e.href.indexOf("forward.action") != -1) e.preventDefault();
-                        })
-                    };
-                }
-            `}
+                injectedJavaScript={script}
                 ref={(webView) => (setWebview(webView))}
                 sharedCookiesEnabled={true}
                 startInLoadingState={true}
@@ -72,4 +70,4 @@ const topInfoJump = () => {
 const styles = StyleSheet.create({
 });
 
-export default topInfoJump;
+export default Ysxy;

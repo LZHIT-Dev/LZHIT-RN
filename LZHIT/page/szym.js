@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView } from 'react-native';
+import { StackNavigator } from 'react-navigation'
+import Qx from './qx';
+import Syxy from './Syxy';
+import updateCheck from './updateCheck';
+import Ysxy from './Ysxy';
 
-const szym = () => {
+class szym extends Component {
+  render() {
     return (
       <>
         <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
@@ -13,20 +19,20 @@ const szym = () => {
           <View style={styles.bodyBackground}>
             <View style={styles.bodyContent}>
               <View style={styles.optionGroup}>
-                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://manual.inlushan.top/')}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => this.props.navigation.navigate('Syxy')}>
                   <Text style={styles.optionText}>使用协议</Text>
                   <Text style={styles.optionTextDescript}>使用前必看</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://manual.inlushan.top/yin-si-shen-ming')}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => this.props.navigation.navigate('Ysxy')}>
                   <Text style={styles.optionText}>隐私申明</Text>
                   <Text style={styles.optionTextDescript}>该应用不会收集你的任何信息哦，请放心使用。</Text>
                   <Text style={styles.optionTextDescript}>(*/ω＼*)</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://www.coolapk.com/apk/288034')}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => this.props.navigation.navigate('updateCheck')}>
                   <Text style={styles.optionText}>检查更新</Text>
-                  <Text style={styles.optionTextDescript}>将前往 <Text style={{color:'#0f9d58'}}>酷安</Text> 进行检查更新</Text>
+                  <Text style={styles.optionTextDescript}>将联网进行更新检查</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://manual.inlushan.top/ying-yong-quan-xian')}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => this.props.navigation.navigate('Qx')}>
                   <Text style={styles.optionText}>权限</Text>
                   <Text style={styles.optionTextDescript}>点击了解此应用需要什么权限</Text>
                 </TouchableOpacity>
@@ -49,6 +55,28 @@ const szym = () => {
       </>
     );
   }
+}
+
+//StackNavigator
+export default StackNavigator({
+  Home: {
+    screen: szym,
+  },
+  Syxy: {
+    screen: Syxy,
+  },
+  Ysxy: {
+    screen: Ysxy,
+  },
+  Qx: {
+    screen: Qx,
+  },
+  updateCheck: {
+    screen: updateCheck,
+  },
+},{
+  headerMode:'None' //隐藏导航栏
+});
 
 const styles = StyleSheet.create({
   titleBar: {
@@ -97,4 +125,3 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
 })
-export default szym;

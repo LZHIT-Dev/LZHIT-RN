@@ -37,8 +37,8 @@ class App extends Component {
                 置顶信息
               </Text>
               <View style={styles.topImageBtnArea}>
-              <TouchableOpacity onPress={() => this.props.navigation.navigate('libCheck')}>
-                  <Image source={{uri:'https://api-serv.tzih.top/lzhit/topInfo.png'}} style={styles.topImageBtn} />
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('topInfoJump')}>
+                  <Image source={{uri:'https://api-serv.tzih.top/inlushan/topInfo.png'}} style={styles.topImageBtn} />
                 </TouchableOpacity>
               </View>
             </View>
@@ -90,7 +90,7 @@ class App extends Component {
                 </TouchableOpacity>
               </View>
             </View>
-            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.1.0.0(Alpha) </Text>
+            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.1.1(Beta) </Text>
           </View>
         </View>
         </ScrollView>
@@ -170,7 +170,6 @@ const styles = StyleSheet.create({
     marginBottom:20,
     fontSize: 20,
     fontWeight: 'bold',
-    fontStyle: 'italic',
   },
   bodyBackground: {
     flex: 5,
@@ -205,7 +204,7 @@ const styles = StyleSheet.create({
   },
   topImageBtn: {
     width: 300,
-    height: 166,
+    height: 63,
     marginLeft:30,
   },
   imageBtn: {
