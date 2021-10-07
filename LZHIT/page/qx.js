@@ -1,73 +1,86 @@
-import React, { useState } from "react";
-import { SafeAreaView, StyleSheet, View, StatusBar, TouchableOpacity, Image, TextInput, Text } from 'react-native';
-import { WebView } from 'react-native-webview';
+import React from "react";
+import { StyleSheet, View, StatusBar, TouchableOpacity, Text, ScrollView } from 'react-native';
 
 const statusBarHeight = StatusBar.currentHeight;
 
 const Qx = () => {
-    const [url, setUrl] = useState('https://manual.inlushan.top/xie-yi/ying-yong-quan-xian');
-    const [webView, setWebview] = useState(null);
-    const [urlInput, setUrlInput] = useState(url);
-
-    //页面加载完成触发
-    const webViewOnLoad = (syntheticEvent) => {
-        const { nativeEvent } = syntheticEvent;
-        const curl = nativeEvent.url;
-        //根据url地址判断刚才已经完成什么操作
-        const jmurl = decodeURIComponent(curl);
-        setUrlInput(jmurl);
-        console.log("网页加载完成，地址是：" + jmurl)
-    };
-
-    //接收web发送过来的信息
-    const onMessage = (event) => {
-        const rep = event.nativeEvent.data;
-        //console.log('-----------webview返回结果--------------');
-        let minLog = rep;
-        if (rep.length > 300) {
-            minLog = rep.substring(0, 290);    //日志太长影响观感
-        }
-        console.log(minLog);
-    };
-    let script = `var tags = document.querySelectorAll('a');
-    Array.prototype.forEach.call(tags, function (tag) {
-        tag.addEventListener('click', function () {
-    console.log("into the " + this.href);
-            if(this.href.indexOf("forward.action") != -1) this.preventDefault();
-        })
-    })`;
     return (
-        <SafeAreaView style={{ flex: 1, marginTop: statusBarHeight }}>
-            <StatusBar translucent={true} backgroundColor="#ffffff" barStyle="dark-content" />
-            <WebView source={{ uri: url }}
-                injectedJavaScript={script}
-                ref={(webView) => (setWebview(webView))}
-                sharedCookiesEnabled={true}
-                startInLoadingState={true}
-                onLoad={webViewOnLoad}
-                onMessage={onMessage}
-                onError={syntheticEvent => {
-                    const { nativeEvent } = syntheticEvent;
-                    console.log('网络连接失败！');
-                    console.warn('WebView error: ', nativeEvent);
-                }}
-            />
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', height: 60, backgroundColor: 'white' }}>
-                <TouchableOpacity onPress={() => { webView.goBack(); }}>
-                    <Image source={require('../resource/images/goBack.png')} style={{ width: 40, height: 40, marginTop: 10, marginBottom: 10, marginLeft: 40 }} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => { webView.reload(); }}>
-                    <Image source={require('../resource/images/refresh.png')} style={{ width: 40, height: 40, marginTop: 10, marginBottom: 10, }} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => { webView.goForward(); }}>
-                    <Image source={require('../resource/images/goForward.png')} style={{ width: 40, height: 40, marginTop: 10, marginBottom: 10, marginRight: 40 }} />
-                </TouchableOpacity>
-            </View>
-
-        </SafeAreaView>);
+        <>
+            <ScrollView>
+                <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
+                <View style={styles.titleBar}>
+                    <Text style={styles.titleText}>权限使用情况</Text>
+                    <Text style={styles.hitokoto}>更新时间：2021年9月22日</Text>
+                </View>
+                <View style={styles.bodyBackground}>
+                    <View style={styles.bodyContent}>
+                        <View style={styles.manualTextGroup}>
+                            <Text style={styles.manualText}>
+                            此应用使用到的您的权限：
+                            </Text>
+                            <Text style={styles.manualText}>
+                            <Text style={{fontWeight: 'bold'}}>android.permission.INTERNET 互联网连接权限：</Text>这是保证在鹿山能够正常使用的必要权限。（系统默认给予）
+                            </Text>
+                            <Text style={styles.manualText}>
+                            <Text style={{fontWeight: 'bold'}}>android.permission.WRITE_EXTERNAL_STORAGE 存储空间使用权限：</Text>这是保证在鹿山能够正常使用的必要权限。（系统默认给予）
+                            </Text>
+                            <Text style={styles.manualText}>
+                            <Text style={{fontWeight: 'bold'}}>android.permission.ACCESS_NETWORK_STATE 获取手机网络状态权限：</Text>这是保证在鹿山能够正常使用的必要权限。（系统默认给予）
+                            </Text>
+                            <Text style={styles.manualText}>
+                            <Text style={{fontWeight: 'bold'}}>android.permission.ACCESS_WIFI_STATE 获取手机 WiFi 状态权限：</Text>这是保证在鹿山能够正常使用的必要权限。（系统默认给予）
+                            </Text>
+                            <Text style={styles.manualText}>
+                            <Text style={{fontWeight: 'bold'}}>android.permission.READ_PHONE_STATE 读取手机识别码权限：</Text>这是保证在鹿山能够正常使用的必要权限。（系统默认给予）
+                            </Text>
+                        </View>
+                    </View>
+                </View>
+            </ScrollView>
+        </>
+    );
 };
 
 const styles = StyleSheet.create({
+    titleBar: {
+        flex: 2,
+        backgroundColor: '#E9E9E9',
+    },
+    titleText: {
+        fontSize: 40,
+        fontWeight: '600',
+        marginLeft: 30,
+        marginTop: 110
+    },
+    hitokoto: {
+        marginTop: 20,
+        marginLeft: 30,
+        marginBottom: 20,
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    bodyBackground: {
+        flex: 5,
+        backgroundColor: '#E9E9E9',
+    },
+    bodyContent: {
+        flex: 1,
+        backgroundColor: '#FFFFFF',
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30,
+        marginBottom: 30
+    },
+    manualTextGroup: {
+        marginLeft: 30,
+        marginTop: 25,
+        marginRight: 30,
+        marginBottom: 30,
+    },
+    manualText: {
+        marginTop: 5,
+        fontSize: 15,
+    },
 });
-
 export default Qx;
