@@ -16,7 +16,7 @@ const updateCheck = () => {
                 <View style={styles.bodyBackground}>
                     <View style={styles.bodyContent}>
                         <View style={styles.manualTextGroup}>
-                            <WebView source={{uri:'https://inlushan.top/update/index.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:400}}></WebView>
+                            <WebView source={{uri:'https://inlushan.top/update/index.php?v=1.2'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:400}}></WebView>
                         </View>
                     </View>
                 </View>
@@ -57,9 +57,7 @@ const styles = StyleSheet.create({
         marginBottom: 30
     },
     manualTextGroup: {
-        marginLeft: 30,
         marginTop: 25,
-        marginRight: 30,
         marginBottom: 30,
     },
     manualText: {
