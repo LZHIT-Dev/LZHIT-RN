@@ -35,6 +35,8 @@ const Qx = () => {
                             </Text>
                         </View>
                     </View>
+                    <Text style={{marginLeft:30,marginTop:30,fontSize:12,color:'#A9A9A9'}}>“在鹿山”App承诺</Text>
+                    <Text style={{marginLeft:30,marginTop:5,marginBottom:50,fontSize:12,color:'#A9A9A9'}}>绝对不会索要任何多余的、无关的权限。</Text>
                 </View>
             </ScrollView>
         </>

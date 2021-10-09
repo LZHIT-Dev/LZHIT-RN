@@ -18,8 +18,13 @@ const Ysxy = () => {
                             <Text style={styles.manualText}>
                                 除了收集您必要的数据（应用崩溃原因、次数、您的手机型号、操作系统及其版本、您的IP所指地区）用于改良用户体验外，“在鹿山” APP 不会收集您的其他任何信息。
                             </Text>
+                            <Text style={styles.manualText}>
+                                若有任何问题与疑虑，欢迎发邮联系：tzh894895@gmail.com
+                            </Text>
                         </View>
                     </View>
+                    <Text style={{marginLeft:30,marginTop:280,fontSize:12,color:'#A9A9A9'}}>“在鹿山”App承诺</Text>
+                    <Text style={{marginLeft:30,marginTop:5,marginBottom:50,fontSize:12,color:'#A9A9A9'}}>绝对不会收集用户任何隐私数据。</Text>
                 </View>
             </ScrollView>
         </>
