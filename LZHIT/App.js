@@ -40,7 +40,7 @@ class App extends Component {
               </Text>
               <View style={styles.topImageBtnArea}>
               <TouchableOpacity onPress={() => this.props.navigation.navigate('topInfoJump')}>
-                  <WebView source={{uri:'file:///android_asset/topInfo.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:75, marginLeft:30,}} />
+                  <WebView source={{uri:'https://inlushan.top/topInfo.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:75, marginLeft:30,}} />
                 </TouchableOpacity>
               </View>
             </View>
