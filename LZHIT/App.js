@@ -9,13 +9,14 @@ import xgxt from './page/xgxt';
 import thePedemic from './page/pedemic';
 import topInfoJump from './page/topinfojump';
 import afdian from './page/afdian';
+import WebView from "react-native-webview";
 
 const userShare = async () => {
   Share.share({
-    message:'我在使用【在鹿山】App，每位柳工院学子都值得拥有的校园生活App！下载地址：inlushan.top',
+    message:'我在使用【在鹿山】App，每位柳工院学子都值得拥有的校园生活App！下载地址：https://inlushan.top/',
     title:'【在鹿山】App', //Android
-    Content:'我在使用【在鹿山】App，每位柳工院学子都值得拥有的校园生活App！下载地址：inlushan.top', //Android/iOS
-    url:'inlushan.top' //iOS
+    Content:'我在使用【在鹿山】App，每位柳工院学子都值得拥有的校园生活App！下载地址：https://inlushan.top/', //Android/iOS
+    url:'https://inlushan.top/' //iOS
   },{
     dialogTitle:'向好友分享【在鹿山】App'
   })
@@ -39,7 +40,7 @@ class App extends Component {
               </Text>
               <View style={styles.topImageBtnArea}>
               <TouchableOpacity onPress={() => this.props.navigation.navigate('topInfoJump')}>
-                  <Image source={{uri:'https://api-serv.tzih.top/inlushan/topInfo.png'}} style={styles.topImageBtn} />
+                  <WebView source={{uri:'file:///android_asset/topInfo.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:75, marginLeft:30,}} />
                 </TouchableOpacity>
               </View>
             </View>
@@ -86,12 +87,12 @@ class App extends Component {
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('szym')}>
                   <Image source={require('./resource/images/setting.png')} style={styles.imageMinBtnSetting}/>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('afdian')}>
+                <TouchableOpacity onPress={() => Linking.openURL('https://afdian.net/@tien0422/plan')}>
                   <Image source={require('./resource/images/sponsor.png')} style={styles.imageMinBtnSponsor}/>
                 </TouchableOpacity>
               </View>
             </View>
-            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.1.4(Release) </Text>
+            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.1.5(Release) </Text>
           </View>
         </View>
         </ScrollView>

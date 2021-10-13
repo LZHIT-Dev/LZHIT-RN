@@ -129,8 +129,8 @@ android {
         applicationId "top.inlushan.android"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 5
-        versionName "1.4_RELEASE"
+        versionCode 6
+        versionName "1.5_RELEASE"
     }
     splits {
         abi {
