@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "399494494937",
+    "project_id": "inlushan",
+    "storage_bucket": "inlushan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399494494937:android:aa1bd72d77c01604271cc8",
+        "android_client_info": {
+          "package_name": "top.inlushan.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399494494937-6v446da70f77iqgovrtt66giqgqpaojq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-ewVF1elEa6HmqOWyCDwSpbNtUpIOSDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399494494937-6v446da70f77iqgovrtt66giqgqpaojq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

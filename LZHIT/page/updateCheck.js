@@ -16,7 +16,7 @@ const updateCheck = () => {
                 <View style={styles.bodyBackground}>
                     <View style={styles.bodyContent}>
                         <View style={styles.manualTextGroup}>
-                            <WebView source={{uri:'https://inlushan.top/update/1_6.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:400}}></WebView>
+                            <WebView source={{uri:'https://inlushan.top/update/1_7.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:400}}></WebView>
                         </View>
                     </View>
                     <Text style={{marginLeft:30,marginTop:30,marginBottom:20,fontSize:12,color:'#A9A9A9'}}>updateCheckServer V0.1.0</Text>

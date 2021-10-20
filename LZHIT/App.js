@@ -87,12 +87,12 @@ class App extends Component {
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('szym')}>
                   <Image source={require('./resource/images/setting.png')} style={styles.imageMinBtnSetting}/>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL('https://afdian.net/@tien0422/plan')}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('afdian')}>
                   <Image source={require('./resource/images/sponsor.png')} style={styles.imageMinBtnSponsor}/>
                 </TouchableOpacity>
               </View>
             </View>
-            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.1.6(Release) </Text>
+            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.1.7(Release) </Text>
           </View>
         </View>
         </ScrollView>
@@ -116,7 +116,7 @@ class App extends Component {
     );
   }
   Bbs() {
-    Alert.alert('暂未开放', '树洞社区暂未开放，感谢关注。',
+    Alert.alert('暂未开放', '受监管要求，树洞社区暂不开放，感谢关注。',
       [
         { text: "知道了", onPress: this.confirm }
       ]

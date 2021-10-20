@@ -5,7 +5,7 @@ import { WebView } from 'react-native-webview';
 const statusBarHeight = StatusBar.currentHeight;
 
 const afdian = () => {
-    const [url, setUrl] = useState('https://afdian.net/@tien0422/plan');
+    const [url, setUrl] = useState('https://manual.inlushan.top/juan-zeng-zuo-zhe');
     const [webView, setWebview] = useState(null);
     const [urlInput, setUrlInput] = useState(url);
 
