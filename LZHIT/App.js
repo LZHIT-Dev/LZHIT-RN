@@ -11,6 +11,7 @@ import topInfoJump from './page/topinfojump';
 import afdian from './page/afdian';
 import WebView from "react-native-webview";
 
+
 const userShare = async () => {
   Share.share({
     message:'我在使用【在鹿山】App，每位柳工院学子都值得拥有的校园生活App！下载地址：https://inlushan.top/',
@@ -92,7 +93,7 @@ class App extends Component {
                 </TouchableOpacity>
               </View>
             </View>
-            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.1.7(Release) </Text>
+            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.2.0(Release) </Text>
           </View>
         </View>
         </ScrollView>
