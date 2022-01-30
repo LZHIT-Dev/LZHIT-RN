@@ -1,9 +1,15 @@
-name: react-native-android-build-apk
+name: "React Native Android Build APK"
+description: "This github action automatically builds the android apk under the artifact section"
+author: "realabbas"
+branding:
+      icon: "archive"
+      color: "blue"
 on:
   push:
     branches:
       - main
 jobs:
+  # First Job
   install-and-test:
     runs-on: ubuntu-latest
     steps:
@@ -11,20 +17,28 @@ jobs:
       - name: Install npm dependencies
         run: |
           npm install
+      # For testing
+      - name: Run tests
+        run: |
+          npm test
+  # Second Job
   build-android:
     needs: install-and-test
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v2
       - name: Install npm dependencies
         run: |
           npm install
+      - name: Make Gradlew Executable
+        run: cd LZHIT/android && chmod +x ./gradlew
+        # Build Command
       - name: Build Android Release
         run: |
-          cd LZHIT/android && chmod +x ./gradlew && sudo ./gradlew assembleRelease
+          cd LZHIT/android && ./gradlew assembleRelease
+      # Upload to Artifact
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
           name: app-release.apk
           path: LZHIT/android/app/build/outputs/apk/release/
-
