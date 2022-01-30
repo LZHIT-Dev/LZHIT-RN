@@ -20,7 +20,7 @@ jobs:
         run: |
           npm install
       - name: Make Gradlew Executable
-        run: cd LZHIT/android && chmod +x ./gradlew
+        run: chmod +x ./LZHIT
       - name: Build Android Release
         run: |
           cd LZHIT/android && ./gradlew assembleRelease
