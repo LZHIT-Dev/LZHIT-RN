@@ -5457,6 +5457,11 @@ react-native-linear-gradient@^2.5.6:
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
   integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
 
+react-native-mopsdk@^1.0.2:
+  version "1.0.2"
+  resolved "https://repo.huaweicloud.com/repository/npm/react-native-mopsdk/-/react-native-mopsdk-1.0.2.tgz#2a99e274d1a84a35636cf2b0dc0a21bc9314508b"
+  integrity sha512-jmE3lDoTdp/StnD0Ac7A6hvFDPBy/zs6G+kFfspo+Rf8Cl5xaC9supWG0chye2r8ABnTv8359iz1sujv+S4d8w==
+
 react-native-safe-area-view@0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.11.0.tgz#4f3dda43c2bace37965e7c6aef5fc83d4f19d174"
