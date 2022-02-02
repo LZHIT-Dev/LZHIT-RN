@@ -10,8 +10,17 @@ import thePedemic from './page/pedemic';
 import topInfoJump from './page/topinfojump';
 import afdian from './page/afdian';
 import WebView from "react-native-webview";
+import MopSDK from 'react-native-mopsdk';
 
+//小程序容器打开
+const onPressOpenJwxtApplet = () => {
+  MopSDK.openApplet('61faa3e88bc99400018e2093', '', '', data => {});
+};
+const onPressOpenXgptApplet = () => {
+  MopSDK.openApplet('61faa8868bc99400018e2094', '', '', data => {});
+};
 
+//分享组件
 const userShare = async () => {
   Share.share({
     message:'我在使用【在鹿山】App，每位柳工院学子都值得拥有的校园生活App！下载地址：https://inlushan.top/',
@@ -24,6 +33,24 @@ const userShare = async () => {
 }
 
 class App extends Component {
+  componentDidMount() {
+    MopSDK.initialize(
+      {
+        appkey: 'rel7xAYijZYWFY/TUj0CgPzgIHI/lBDkWFvNgcDWCzo=',
+        secret: '4e7d6a94ec7c2ded',
+        apiServer: 'https://api.finclip.com',
+        apiPrefix: '/api/v1/mop',
+      },
+      data => {
+        console.log('message;', data);
+        const s = JSON.stringify(data);
+        this.setState({
+          status: 'native callback received',
+          message: s,
+        });
+      },
+    );
+  }
   render() {
     return (
       <>
@@ -50,10 +77,10 @@ class App extends Component {
                 教务相关
               </Text>
               <View style={styles.imageBtnArea}>
-                <TouchableOpacity onPress={() => Linking.openURL('http://xgxt.lzhit.edu.cn/xsfw/sys/emaphome/portal/index.do')}>
+                <TouchableOpacity onPress={onPressOpenJwxtApplet}>
                   <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL('http://jwglxt.lzhit.edu.cn/jwglxt/xtgl/')}>
+                <TouchableOpacity onPress={onPressOpenXgptApplet}>
                   <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn} />
                 </TouchableOpacity>
               </View>
