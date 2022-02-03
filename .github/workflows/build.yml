@@ -25,7 +25,7 @@ jobs:
         run: cd LZHIT/android && chmod +x ./gradlew
       - name: Build Android Release
         run: |
-          cd LZHIT && npm i @react-native-community/cli-platform-android && cd LZHIT/android && ./gradlew assembleRelease
+          cd LZHIT && npm i @react-native-community/cli-platform-android && cd android && ./gradlew assembleRelease
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
