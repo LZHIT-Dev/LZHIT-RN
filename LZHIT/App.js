@@ -77,10 +77,10 @@ class App extends Component {
                 教务相关
               </Text>
               <View style={styles.imageBtnArea}>
-                <TouchableOpacity onPress={onPressOpenJwxtApplet}>
+                <TouchableOpacity onPress={onPressOpenXgptApplet}>
                   <Image source={require('./resource/images/btn_glxt.png')} style={styles.imageBtn} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={onPressOpenXgptApplet}>
+                <TouchableOpacity onPress={onPressOpenJwxtApplet}>
                   <Image source={require('./resource/images/btn_jwxt.png')} style={styles.imageBtn} />
                 </TouchableOpacity>
               </View>
