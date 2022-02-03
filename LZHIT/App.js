@@ -19,6 +19,15 @@ const onPressOpenJwxtApplet = () => {
 const onPressOpenXgptApplet = () => {
   MopSDK.openApplet('61faa8868bc99400018e2094', '', '', data => {});
 };
+const onPressOpenLibcheckApplet = () => {
+  MopSDK.openApplet('61fbbf588bc99400018e20a1', '', '', data => {});
+}
+const onPressOpenSchoolmapApplet = () => {
+  MopSDK.openApplet('61fbc9ec8bc99400018e20a5', '', '', data => {});
+}
+const onPressOpenBbsApplet = () => {
+  MopSDK.openApplet('61fbca1c8bc99400018e20a7', '', '', data => {});
+}
 
 //分享组件
 const userShare = async () => {
@@ -93,14 +102,17 @@ class App extends Component {
                 <TouchableOpacity onPress={this.Network.bind(this)}>
                   <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.Bbs.bind(this)}>
+                <TouchableOpacity onPress={onPressOpenBbsApplet}>
                   <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={this.Pedemic.bind(this)}>
                   <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('libCheck')}>
+                <TouchableOpacity onPress={onPressOpenLibcheckApplet}>
                   <Image source={require('./resource/images/libCheck.png')} style={styles.imageMinBtnLibCheck} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={onPressOpenSchoolmapApplet}>
+                  <Image source={require('./resource/images/schoolMap.png')} style={styles.imageMinBtnSchoolMap} />>
                 </TouchableOpacity>
               </View>
             </View>
@@ -140,13 +152,6 @@ class App extends Component {
       [
         { text: "返回", onPress: this.confirm },
         { text: "我已知晓", onPress: () => this.props.navigation.navigate('thePedemic')},
-      ]
-    );
-  }
-  Bbs() {
-    Alert.alert('暂未开放', '受监管要求，树洞社区暂不开放，感谢关注。',
-      [
-        { text: "知道了", onPress: this.confirm }
       ]
     );
   }
@@ -269,6 +274,12 @@ const styles = StyleSheet.create({
     height: 68,
     width: 196
   },
+  imageMinBtnSchoolMap: {
+    marginTop: 10,
+    marginLeft: 30,
+    width: 143,
+    height: 68
+  },
   imageMinBtnShare: {
     width: 160,
     height: 65.54,
@@ -286,5 +297,5 @@ const styles = StyleSheet.create({
     height: 66.94,
     marginTop: 10,
     marginLeft: 30,
-  }
+  },
 });
