@@ -21,6 +21,7 @@
     "react-native-mopsdk": "^1.0.2",
     "react-native-shadow-cards": "^1.0.2",
     "react-native-svg": "^12.1.1",
+    "react-native-update-app": "^1.1.11",
     "react-native-webview": "^11.13.0",
     "react-native-webview-tencentx5": "^1.0.2"
   },

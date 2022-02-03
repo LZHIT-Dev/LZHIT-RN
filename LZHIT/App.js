@@ -21,13 +21,13 @@ const onPressOpenXgptApplet = () => {
 };
 const onPressOpenLibcheckApplet = () => {
   MopSDK.openApplet('61fbbf588bc99400018e20a1', '', '', data => {});
-}
+};
 const onPressOpenSchoolmapApplet = () => {
   MopSDK.openApplet('61fbc9ec8bc99400018e20a5', '', '', data => {});
-}
+};
 const onPressOpenBbsApplet = () => {
   MopSDK.openApplet('61fbca1c8bc99400018e20a7', '', '', data => {});
-}
+};
 
 //分享组件
 const userShare = async () => {
@@ -60,6 +60,7 @@ class App extends Component {
       },
     );
   }
+
   render() {
     return (
       <>
@@ -297,5 +298,5 @@ const styles = StyleSheet.create({
     height: 66.94,
     marginTop: 10,
     marginLeft: 30,
-  },
+  }
 });

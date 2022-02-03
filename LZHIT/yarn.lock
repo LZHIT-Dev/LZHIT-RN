@@ -5503,6 +5503,11 @@ react-native-tab-view@^1.0.0:
   dependencies:
     prop-types "^15.6.1"
 
+react-native-update-app@^1.1.11:
+  version "1.1.11"
+  resolved "https://repo.huaweicloud.com/repository/npm/react-native-update-app/-/react-native-update-app-1.1.11.tgz#cb25494cb425f360ae2cf4216b29d9d0dad3d830"
+  integrity sha512-YuElEsy+G37tjxqr4g14LpLvUvAs/G54XveJOb/vwthCKOwNsLnu0Z0QGsqMd2syftgj/iZqLPa7gWf2kqe/8A==
+
 react-native-webview-tencentx5@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-native-webview-tencentx5/-/react-native-webview-tencentx5-1.0.2.tgz#5f343bfaa2a4b6c12bace778985784a552076e74"
