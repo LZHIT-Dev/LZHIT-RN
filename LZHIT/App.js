@@ -113,7 +113,7 @@ class App extends Component {
                   <Image source={require('./resource/images/libCheck.png')} style={styles.imageMinBtnLibCheck} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={onPressOpenSchoolmapApplet}>
-                  <Image source={require('./resource/images/schoolMap.png')} style={styles.imageMinBtnSchoolMap} />>
+                  <Image source={require('./resource/images/schoolMap.png')} style={styles.imageMinBtnSchoolMap} />
                 </TouchableOpacity>
               </View>
             </View>
