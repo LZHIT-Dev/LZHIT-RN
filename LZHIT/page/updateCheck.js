@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View, StatusBar, TouchableOpacity, Text, ScrollView, Image} from 'react-native';
 import path from 'react-native-path'
 import Pgyer from 'react-native-pgyer-bridge';
+import WebView from "react-native-webview";
 import pathUtils from "react-navigation/src/routers/pathUtils";
 const statusBarHeight = StatusBar.currentHeight;
 
