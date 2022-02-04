@@ -1,8 +1,11 @@
 import React from "react";
-import { StyleSheet, View, StatusBar, TouchableOpacity, Text, ScrollView } from 'react-native';
-import WebView from "react-native-webview";
-
+import { StyleSheet, View, StatusBar, TouchableOpacity, Text, ScrollView, Image} from 'react-native';
+import path from 'react-native-path'
+import Pgyer from 'react-native-pgyer-bridge';
+import pathUtils from "react-navigation/src/routers/pathUtils";
 const statusBarHeight = StatusBar.currentHeight;
+
+
 
 const updateCheck = () => {
     return (
@@ -16,10 +19,10 @@ const updateCheck = () => {
                 <View style={styles.bodyBackground}>
                     <View style={styles.bodyContent}>
                         <View style={styles.manualTextGroup}>
-                            <WebView source={{uri:'https://inlushan.top/update/2_0.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:400}}></WebView>
+                        <WebView source={{uri:'https://inlushan.top/update/2_0.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:400}}></WebView>
                         </View>
                     </View>
-                    <Text style={{marginLeft:30,marginTop:30,marginBottom:20,fontSize:12,color:'#A9A9A9'}}>updateCheckServer V0.1.0</Text>
+                    <Text style={{marginLeft:30,marginTop:30,marginBottom:20,fontSize:12,color:'#A9A9A9'}}>updateCheckServer V0.2.0</Text>
                 </View>
             </ScrollView>
         </>
@@ -59,7 +62,7 @@ const styles = StyleSheet.create({
     },
     manualTextGroup: {
         marginTop: 25,
-        marginBottom: 30,
+        marginBottom: 25,
     },
     manualText: {
         marginTop: 5,

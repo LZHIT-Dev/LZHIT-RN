@@ -44,6 +44,14 @@ const userShare = async () => {
 
 class App extends Component {
   componentDidMount() {
+    Pgyer.initWithConfig({
+      // themeColor: '#ffff00',
+      colorPickerBackgroundColor: '#ff0000',
+      colorTitleBg: '#ff0000',
+      appId: Platform.select({
+        android: 'ca4f383ea4e397a79934c458f758f396'
+      })
+    })
     MopSDK.initialize(
       {
         appkey: 'rel7xAYijZYWFY/TUj0CgPzgIHI/lBDkWFvNgcDWCzo=',
@@ -60,13 +68,13 @@ class App extends Component {
         });
       },
     );
+    Pgyer.getUpdateInfo().then(res => {
+      console.log('结果', res);
+      // ios端可以直接打开安装
+      // Linking.openURL(res.downloadURL)
+    });
   }
-  handleAppStateChange = (appState) => {
-    if (appState === 'active') {
-            // 获取剪贴板内容
-            getClipboardShare()
-    }
-};
+
   render() {
     return (
       <>

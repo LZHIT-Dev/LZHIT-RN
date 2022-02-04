@@ -5,6 +5,7 @@ import Qx from './qx';
 import Syxy from './Syxy';
 import updateCheck from './updateCheck';
 import Ysxy from './Ysxy';
+import Pgyer from 'react-native-pgyer-bridge';
 
 class szym extends Component {
   render() {
@@ -36,7 +37,7 @@ class szym extends Component {
                   <Text style={styles.optionText}>权限</Text>
                   <Text style={styles.optionTextDescript}>点击了解此应用需要什么权限</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('mailto:tzh894895@gmail.com')}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => {Pgyer.showFeedbackView({"自定义参数": "我是自定义参数"})}}>
                   <Text style={styles.optionText}>关于作者</Text>
                   <Text style={styles.optionTextDescript}>©木辛恒同学</Text>
                   <Text style={styles.optionTextDescript}>邮箱：tzh894895@gmail.com</Text>
