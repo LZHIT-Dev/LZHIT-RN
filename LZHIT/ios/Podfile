@@ -12,6 +12,8 @@ target 'LZHIT' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-pgyer-bridge', :path => '../node_modules/react-native-pgyer-bridge'
+
   target 'LZHITTests' do
     inherit! :complete
     # Pods for testing
