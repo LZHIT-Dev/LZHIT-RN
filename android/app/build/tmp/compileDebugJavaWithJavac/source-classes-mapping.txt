@@ -1,0 +1,14 @@
+top/inlushan/android/MainApplication.java
+ top.inlushan.android.MainApplication
+ top.inlushan.android.MainApplication$1
+top/inlushan/android/MainActivity.java
+ top.inlushan.android.MainActivity
+com/lzhit/ReactNativeFlipper.java
+ com.lzhit.ReactNativeFlipper
+ com.lzhit.ReactNativeFlipper$1
+ com.lzhit.ReactNativeFlipper$2
+ com.lzhit.ReactNativeFlipper$2$1
+top/inlushan/android/BuildConfig.java
+ top.inlushan.android.BuildConfig
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

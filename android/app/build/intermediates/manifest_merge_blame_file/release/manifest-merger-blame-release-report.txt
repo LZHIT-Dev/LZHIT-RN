@@ -1,0 +1,482 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="top.inlushan.android"
+4    android:versionCode="21"
+5    android:versionName="2.1_RELEASE" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:4:5-67
+11-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:5:5-81
+12-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:5:22-78
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:6:5-79
+13-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:6:22-76
+14    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+14-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:7:5-76
+14-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:7:22-73
+15    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+15-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:8:5-75
+15-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:8:22-72
+16    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序录制音频 -->
+16-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:9:5-71
+16-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:9:22-68
+17    <uses-permission android:name="android.permission.GET_TASKS" />
+17-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:10:5-67
+17-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:10:22-65
+18    <!-- Android8.0 安装 apk 需要添加权限 -->
+19    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+19-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:12:5-83
+19-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:12:22-80
+20    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+20-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:14:5-80
+20-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:14:22-77
+21    <uses-permission android:name="android.permission.REORDER_TASKS" />
+21-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:16:5-72
+21-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:16:22-69
+22    <uses-permission android:name="android.permission.CAMERA" /> <!-- 后台播放音频需要 -->
+22-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:17:5-65
+22-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:17:22-62
+23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+23-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:21:5-77
+23-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:21:22-74
+24
+25    <uses-feature android:name="android.hardware.camera" />
+25-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:23:5-60
+25-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:23:19-57
+26    <uses-feature android:name="android.hardware.camera.autofocus" />
+26-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:24:5-70
+26-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:24:19-67
+27
+28    <permission
+28-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:26:5-28:47
+29        android:name="top.inlushan.android.permission.FIN_APPLET_RECEIVER"
+29-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:27:9-71
+30        android:protectionLevel="signature" />
+30-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:28:9-44
+31
+32    <uses-permission android:name="top.inlushan.android.permission.FIN_APPLET_RECEIVER" />
+32-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:30:5-87
+32-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:30:22-84
+33    <uses-permission android:name="android.permission.WAKE_LOCK" />
+33-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:25:5-68
+33-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:25:22-65
+34    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+34-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:26:5-110
+34-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:26:22-107
+35
+36    <application
+36-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:14:5-37:19
+37        android:name="top.inlushan.android.MainApplication"
+37-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:15:7-38
+38        android:allowBackup="false"
+38-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:20:7-34
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.1.0] C:\Users\iveti\.gradle\caches\transforms-3\d26ac70905a674c29cf9740f74c3ee14\transformed\core-1.1.0\AndroidManifest.xml:24:18-86
+40        android:icon="@mipmap/ic_launcher"
+40-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:18:7-41
+41        android:label="@string/app_name"
+41-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:17:7-39
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:19:7-52
+43        android:supportsRtl="true"
+43-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:33:9-35
+44        android:theme="@style/AppTheme"
+44-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:21:7-38
+45        android:usesCleartextTraffic="true" >
+45-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:16:7-42
+46
+47        <!-- 添加新版本检测 -->
+48        <meta-data
+48-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:23:9-25:46
+49            android:name="PGYER_FEATURE_CHECK_UNPDATE"
+49-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:24:13-55
+50            android:value="true" />
+50-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:25:13-33
+51
+52        <activity
+52-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:26:7-36:18
+53            android:name="top.inlushan.android.MainActivity"
+53-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:27:9-37
+54            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+54-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:29:9-86
+55            android:label="@string/app_name"
+55-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:28:9-41
+56            android:launchMode="singleTask"
+56-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:30:9-40
+57            android:windowSoftInputMode="adjustResize" >
+57-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:31:9-51
+58            <intent-filter>
+58-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:32:9-35:25
+59                <action android:name="android.intent.action.MAIN" />
+59-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:33:13-65
+59-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:33:21-62
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:34:13-73
+61-->D:\project\Private\LZHIT\android\app\src\main\AndroidManifest.xml:34:23-70
+62            </intent-filter>
+63        </activity>
+64
+65        <meta-data
+65-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:9-15:56
+66            android:name="pushy_build_time"
+66-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-44
+67            android:value="@string/pushy_build_time" />
+67-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-53
+68
+69        <provider
+69-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:17:9-25:20
+70            android:name="cn.reactnative.modules.update.PushyFileProvider"
+70-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-75
+71            android:authorities="top.inlushan.android.pushy.fileprovider"
+71-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:13-70
+72            android:exported="false"
+72-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:20:13-37
+73            android:grantUriPermissions="true" >
+73-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-47
+74            <meta-data
+74-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-24:60
+75                android:name="android.support.FILE_PROVIDER_PATHS"
+75-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:17-67
+76                android:resource="@xml/pushy_file_paths" />
+76-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:17-57
+77        </provider>
+78        <provider
+78-->[:react-native-webview] D:\project\Private\LZHIT\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-18:20
+79            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+79-->[:react-native-webview] D:\project\Private\LZHIT\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-83
+80            android:authorities="top.inlushan.android.fileprovider"
+80-->[:react-native-webview] D:\project\Private\LZHIT\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-64
+81            android:exported="false"
+81-->[:react-native-webview] D:\project\Private\LZHIT\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+82            android:grantUriPermissions="true" >
+82-->[:react-native-webview] D:\project\Private\LZHIT\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
+83            <meta-data
+83-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-24:60
+84                android:name="android.support.FILE_PROVIDER_PATHS"
+84-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:17-67
+85                android:resource="@xml/file_provider_paths" />
+85-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:17-57
+86        </provider>
+87
+88        <service android:name="com.finogeeks.lib.applet.remote.ExtensionApiService" />
+88-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:35:9-87
+88-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:35:18-84
+89        <service android:name="com.finogeeks.lib.applet.remote.ExtensionWebApiService" />
+89-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:36:9-90
+89-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:36:18-87
+90        <service
+90-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:37:9-47:19
+91            android:name="com.finogeeks.lib.applet.ipc.FinAppAIDLService"
+91-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:38:13-74
+92            android:enabled="true"
+92-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:39:13-35
+93            android:exported="false"
+93-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:40:13-37
+94            android:permission="top.inlushan.android.permission.APP_AIDL_SERVER" >
+94-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:41:13-77
+95            <intent-filter>
+95-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:42:13-46:29
+96                <action android:name="top.inlushan.android.action.APP_AIDL_SERVER" />
+96-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:43:17-82
+96-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:43:25-79
+97
+98                <category android:name="android.intent.category.DEFAULT" />
+98-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:45:17-76
+98-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:45:27-73
+99            </intent-filter>
+100        </service>
+101        <service android:name="com.finogeeks.lib.applet.modules.service.ForegroundService" />
+101-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:48:9-94
+101-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:48:18-91
+102        <service
+102-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:49:9-53:40
+103            android:name="com.finogeeks.lib.applet.media.video.server.PlayerService"
+103-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:50:13-85
+104            android:enabled="true"
+104-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:51:13-35
+105            android:exported="false"
+105-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:52:13-37
+106            android:process=":media" />
+106-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:53:13-37
+107
+108        <activity
+108-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:55:9-61:58
+109            android:name="com.finogeeks.lib.applet.main.FinAppHomeActivity$AppHome0"
+109-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:56:13-85
+110            android:configChanges="orientation|screenSize|keyboardHidden"
+110-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:57:13-74
+111            android:process=":FinApp0"
+111-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:58:13-39
+112            android:taskAffinity=".top.inlushan.android.FinApp0"
+112-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:59:13-61
+113            android:theme="@style/FinAppletTheme"
+113-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:60:13-50
+114            android:windowSoftInputMode="adjustResize" />
+114-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:61:13-55
+115        <activity
+115-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:62:9-68:58
+116            android:name="com.finogeeks.lib.applet.main.FinAppHomeActivity$AppHome1"
+116-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:63:13-85
+117            android:configChanges="orientation|screenSize|keyboardHidden"
+117-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:64:13-74
+118            android:process=":FinApp1"
+118-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:65:13-39
+119            android:taskAffinity=".top.inlushan.android.FinApp1"
+119-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:66:13-61
+120            android:theme="@style/FinAppletTheme"
+120-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:67:13-50
+121            android:windowSoftInputMode="adjustResize" />
+121-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:68:13-55
+122        <activity
+122-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:69:9-75:58
+123            android:name="com.finogeeks.lib.applet.main.FinAppHomeActivity$AppHome2"
+123-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:70:13-85
+124            android:configChanges="orientation|screenSize|keyboardHidden"
+124-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:71:13-74
+125            android:process=":FinApp2"
+125-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:72:13-39
+126            android:taskAffinity=".top.inlushan.android.FinApp2"
+126-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:73:13-61
+127            android:theme="@style/FinAppletTheme"
+127-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:74:13-50
+128            android:windowSoftInputMode="adjustResize" />
+128-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:75:13-55
+129        <activity
+129-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:76:9-82:58
+130            android:name="com.finogeeks.lib.applet.main.FinAppHomeActivity$AppHome3"
+130-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:77:13-85
+131            android:configChanges="orientation|screenSize|keyboardHidden"
+131-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:78:13-74
+132            android:process=":FinApp3"
+132-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:79:13-39
+133            android:taskAffinity=".top.inlushan.android.FinApp3"
+133-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:80:13-61
+134            android:theme="@style/FinAppletTheme"
+134-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:81:13-50
+135            android:windowSoftInputMode="adjustResize" />
+135-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:82:13-55
+136        <activity
+136-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:83:9-89:58
+137            android:name="com.finogeeks.lib.applet.main.FinAppHomeActivity$AppHome4"
+137-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:84:13-85
+138            android:configChanges="orientation|screenSize|keyboardHidden"
+138-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:85:13-74
+139            android:process=":FinApp4"
+139-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:86:13-39
+140            android:taskAffinity=".top.inlushan.android.FinApp4"
+140-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:87:13-61
+141            android:theme="@style/FinAppletTheme"
+141-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:88:13-50
+142            android:windowSoftInputMode="adjustResize" />
+142-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:89:13-55
+143        <activity
+143-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:90:9-94:53
+144            android:name="com.finogeeks.lib.applet.scancode.ui.activity.ScanCaptureActivity"
+144-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:91:13-93
+145            android:configChanges="orientation|keyboardHidden|screenSize"
+145-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:92:13-74
+146            android:screenOrientation="portrait"
+146-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:93:13-49
+147            android:theme="@style/FinAppletTheme" />
+147-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:94:13-50
+148        <activity
+148-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:95:9-99:73
+149            android:name="com.finogeeks.lib.applet.modules.mediaviewer.MediaViewerActivity"
+149-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:96:13-92
+150            android:configChanges="orientation|screenSize"
+150-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:97:13-59
+151            android:multiprocess="true"
+151-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:98:13-40
+152            android:theme="@style/FinAppletTheme.MediaViewerActivity" />
+152-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:99:13-70
+153        <activity
+153-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:100:9-104:53
+154            android:name="com.finogeeks.lib.applet.modules.documentviewer.DocumentViewerActivity"
+154-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:101:13-98
+155            android:configChanges="orientation|screenSize"
+155-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:102:13-59
+156            android:multiprocess="true"
+156-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:103:13-40
+157            android:theme="@style/FinAppletTheme" />
+157-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:104:13-50
+158        <activity
+158-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:105:9-110:53
+159            android:name="com.finogeeks.lib.applet.modules.about.AboutAppletActivity"
+159-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:106:13-86
+160            android:configChanges="orientation|screenSize"
+160-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:107:13-59
+161            android:multiprocess="true"
+161-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:108:13-40
+162            android:screenOrientation="portrait"
+162-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:109:13-49
+163            android:theme="@style/FinAppletTheme" />
+163-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:110:13-50
+164        <activity
+164-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:111:9-125:20
+165            android:name="com.finogeeks.lib.applet.modules.urlrouter.UrlRouterActivity"
+165-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:112:13-88
+166            android:configChanges="orientation|screenSize"
+166-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:113:13-59
+167            android:excludeFromRecents="true"
+167-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:114:13-46
+168            android:exported="true"
+168-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:115:13-36
+169            android:theme="@style/FinAppletTranslucentTheme" >
+169-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:116:13-61
+170            <intent-filter android:label="@string/app_name" >
+170-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:117:13-124:29
+170-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:117:28-60
+171                <data android:scheme="@string/fin_applet_router_url_scheme" />
+171-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:118:17-79
+171-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:118:23-76
+172
+173                <action android:name="android.intent.action.VIEW" />
+173-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:120:17-69
+173-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:120:25-66
+174
+175                <category android:name="android.intent.category.DEFAULT" />
+175-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:45:17-76
+175-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:45:27-73
+176                <category android:name="android.intent.category.BROWSABLE" />
+176-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:123:17-78
+176-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:123:27-75
+177            </intent-filter>
+178        </activity>
+179        <activity
+179-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:126:9-131:53
+180            android:name="com.finogeeks.lib.applet.modules.webview.WebViewActivity"
+180-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:127:13-84
+181            android:configChanges="orientation|screenSize"
+181-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:128:13-59
+182            android:label="@string/fin_applet_more_menu_feedback_and_complaint"
+182-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:129:13-80
+183            android:multiprocess="true"
+183-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:130:13-40
+184            android:theme="@style/FinAppletTheme" />
+184-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:131:13-50
+185        <activity
+185-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:132:9-135:53
+186            android:name="com.finogeeks.lib.applet.modules.store.FinAppletTypeInfoActivity"
+186-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:133:13-92
+187            android:configChanges="orientation|screenSize"
+187-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:134:13-59
+188            android:theme="@style/FinAppletTheme" />
+188-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:135:13-50
+189        <activity
+189-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:136:9-140:53
+190            android:name="com.finogeeks.lib.applet.modules.applet_scope.ui.AppletScopeSettingActivity"
+190-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:137:13-103
+191            android:configChanges="orientation|screenSize"
+191-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:138:13-59
+192            android:multiprocess="true"
+192-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:139:13-40
+193            android:theme="@style/FinAppletTheme" />
+193-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:140:13-50
+194
+195        <provider
+195-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:142:9-150:20
+196            android:name="com.finogeeks.lib.applet.modules.provider.FinAppletFileProvider"
+196-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:143:13-91
+197            android:authorities="top.inlushan.android.finapplet.provider"
+197-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:144:13-70
+198            android:exported="false"
+198-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:145:13-37
+199            android:grantUriPermissions="true" >
+199-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:146:13-47
+200            <meta-data
+200-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-24:60
+201                android:name="android.support.FILE_PROVIDER_PATHS"
+201-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:17-67
+202                android:resource="@xml/fin_applet_provider_paths" />
+202-->[:react-native-update] D:\project\Private\LZHIT\node_modules\react-native-update\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:17-57
+203        </provider>
+204
+205        <receiver
+205-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:152:9-155:40
+206            android:name="com.finogeeks.lib.applet.media.video.server.RemoteControlReceiver"
+206-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:153:13-93
+207            android:enabled="true"
+207-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:154:13-35
+208            android:exported="false" />
+208-->[com.finogeeks.lib:finapplet:2.35.5] C:\Users\iveti\.gradle\caches\transforms-3\b389da0a0b1665b58ec3c6555f2c3ceb\transformed\jetified-finapplet-2.35.5\AndroidManifest.xml:155:13-37
+209        <receiver
+209-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:29:9-33:20
+210            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+210-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:30:13-85
+211            android:enabled="true"
+211-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:31:13-35
+212            android:exported="false" >
+212-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:32:13-37
+213        </receiver>
+214
+215        <service
+215-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:35:9-38:40
+216            android:name="com.google.android.gms.measurement.AppMeasurementService"
+216-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:36:13-84
+217            android:enabled="true"
+217-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:37:13-35
+218            android:exported="false" />
+218-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:38:13-37
+219        <service
+219-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:39:9-43:72
+220            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+220-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:40:13-87
+221            android:enabled="true"
+221-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:41:13-35
+222            android:exported="false"
+222-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:42:13-37
+223            android:permission="android.permission.BIND_JOB_SERVICE" />
+223-->[com.google.android.gms:play-services-measurement:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\fd176130eec18c5e28668771d4646ade\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:43:13-69
+224        <service
+224-->[com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\f6912065742e5973cdcee1e39e219113\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:27:9-33:19
+225            android:name="com.google.firebase.components.ComponentDiscoveryService"
+225-->[com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\f6912065742e5973cdcee1e39e219113\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:28:13-84
+226            android:directBootAware="true"
+226-->[com.google.firebase:firebase-common:20.0.0] C:\Users\iveti\.gradle\caches\transforms-3\121213876db6fa70b005d26d22ee47f3\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+227            android:exported="false" >
+227-->[com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\f6912065742e5973cdcee1e39e219113\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:29:13-37
+228            <meta-data
+228-->[com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\f6912065742e5973cdcee1e39e219113\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:30:13-32:85
+229                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+229-->[com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\f6912065742e5973cdcee1e39e219113\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:31:17-139
+230                android:value="com.google.firebase.components.ComponentRegistrar" />
+230-->[com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\iveti\.gradle\caches\transforms-3\f6912065742e5973cdcee1e39e219113\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:32:17-82
+231            <meta-data
+231-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\iveti\.gradle\caches\transforms-3\8e6c4e75474b68b3925edd169f112318\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
+232                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+232-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\iveti\.gradle\caches\transforms-3\8e6c4e75474b68b3925edd169f112318\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+233                android:value="com.google.firebase.components.ComponentRegistrar" />
+233-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\iveti\.gradle\caches\transforms-3\8e6c4e75474b68b3925edd169f112318\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
+234        </service>
+235
+236        <provider
+236-->[com.google.firebase:firebase-common:20.0.0] C:\Users\iveti\.gradle\caches\transforms-3\121213876db6fa70b005d26d22ee47f3\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+237            android:name="com.google.firebase.provider.FirebaseInitProvider"
+237-->[com.google.firebase:firebase-common:20.0.0] C:\Users\iveti\.gradle\caches\transforms-3\121213876db6fa70b005d26d22ee47f3\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+238            android:authorities="top.inlushan.android.firebaseinitprovider"
+238-->[com.google.firebase:firebase-common:20.0.0] C:\Users\iveti\.gradle\caches\transforms-3\121213876db6fa70b005d26d22ee47f3\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+239            android:directBootAware="true"
+239-->[com.google.firebase:firebase-common:20.0.0] C:\Users\iveti\.gradle\caches\transforms-3\121213876db6fa70b005d26d22ee47f3\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+240            android:exported="false"
+240-->[com.google.firebase:firebase-common:20.0.0] C:\Users\iveti\.gradle\caches\transforms-3\121213876db6fa70b005d26d22ee47f3\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+241            android:initOrder="100" />
+241-->[com.google.firebase:firebase-common:20.0.0] C:\Users\iveti\.gradle\caches\transforms-3\121213876db6fa70b005d26d22ee47f3\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+242
+243        <meta-data
+243-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\iveti\.gradle\caches\transforms-3\3f1683eeb844454439bf1c90779837b6\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+244            android:name="com.google.android.gms.version"
+244-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\iveti\.gradle\caches\transforms-3\3f1683eeb844454439bf1c90779837b6\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+245            android:value="@integer/google_play_services_version" />
+245-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\iveti\.gradle\caches\transforms-3\3f1683eeb844454439bf1c90779837b6\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+246    </application>
+247
+248</manifest>
