@@ -1,0 +1,33 @@
+name: react-native-android-build-apk
+on:
+  push:
+    branches:
+      - main
+jobs:
+  install-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install npm dependencies
+        run: |
+          npm install
+  build-android:
+    needs: install-and-test
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Install npm dependencies
+        run: |
+          npm install
+      - name: Make permission right
+        run: chmod +x ./LZHIT
+      - name: Make Gradlew Executable
+        run: cd LZHIT/android && chmod +x ./gradlew
+      - name: Build Android Release
+        run: |
+          cd LZHIT && npm i @react-native-community/cli-platform-android && cd android && ./gradlew assembleRelease
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: app-release.apk
+          path: LZHIT/android/app/build/outputs/apk/release/

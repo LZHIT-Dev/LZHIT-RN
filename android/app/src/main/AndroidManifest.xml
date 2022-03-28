@@ -1,0 +1,53 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="top.inlushan.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- Android8.0 安装 apk 需要添加权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+      android:name=".MainApplication"
+      android:networkSecurityConfig="@xml/network_security_config"
+      android:usesCleartextTraffic="true"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+         <provider
+           android:name="com.pgyersdk.PgyerProvider"
+           android:authorities="${applicationId}.com.pgyer.provider"
+           android:exported="false"/>
+              <meta-data
+       android:name="PGYER_APPID"
+       android:value="ca4f383ea4e397a79934c458f758f396" >
+   </meta-data>
+       <meta-data
+            android:name="PGYER_API_KEY"
+            android:value="ca4f383ea4e397a79934c458f758f396"></meta-data>
+        <meta-data
+            android:name="PGYER_FRONTJS_KEY"
+            android:value="95ac122606ab44964b5dcc0e9075725d"></meta-data>
+        <!--添加新版本检测-->
+        <meta-data
+            android:name="PGYER_FEATURE_CHECK_UNPDATE"
+            android:value="true"></meta-data>
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+    </application>
+    </manifest>
