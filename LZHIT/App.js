@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView, Share } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, ScrollView, Share } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import Jwxt from './page/jwxt'
 import netWork from './page/Network'
@@ -11,7 +11,7 @@ import topInfoJump from './page/topinfojump';
 import afdian from './page/afdian';
 import WebView from "react-native-webview";
 import MopSDK from 'react-native-mopsdk';
-import Pgyer from 'react-native-pgyer-bridge';
+import { simpleUpdate } from 'react-native-update';
 
 //小程序容器打开
 const onPressOpenJwxtApplet = () => {
@@ -44,14 +44,7 @@ const userShare = async () => {
 
 class App extends Component {
   componentDidMount() {
-    Pgyer.initWithConfig({
-      // themeColor: '#ffff00',
-      colorPickerBackgroundColor: '#ff0000',
-      colorTitleBg: '#ff0000',
-      appId: Platform.select({
-        android: 'ca4f383ea4e397a79934c458f758f396'
-      })
-    })
+    export default simpleUpdate(App);
     MopSDK.initialize(
       {
         appkey: 'rel7xAYijZYWFY/TUj0CgPzgIHI/lBDkWFvNgcDWCzo=',
@@ -68,11 +61,6 @@ class App extends Component {
         });
       },
     );
-    Pgyer.getUpdateInfo().then(res => {
-      console.log('结果', res);
-      // ios端可以直接打开安装
-      // Linking.openURL(res.downloadURL)
-    });
   }
 
   render() {

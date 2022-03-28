@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Alert, TouchableOpacity, ScrollView } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import Qx from './qx';
 import Syxy from './Syxy';
 import updateCheck from './updateCheck';
 import Ysxy from './Ysxy';
-import Pgyer from 'react-native-pgyer-bridge';
 
 class szym extends Component {
   render() {
@@ -37,7 +36,7 @@ class szym extends Component {
                   <Text style={styles.optionText}>权限</Text>
                   <Text style={styles.optionTextDescript}>点击了解此应用需要什么权限</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.optionTextGroup} onPress={() => {Pgyer.showFeedbackView({"自定义参数": "我是自定义参数"})}}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={this.AboutMe.bind(this)}>
                   <Text style={styles.optionText}>关于作者</Text>
                   <Text style={styles.optionTextDescript}>©木辛恒同学</Text>
                   <Text style={styles.optionTextDescript}>邮箱：tzh894895@gmail.com</Text>
@@ -54,6 +53,13 @@ class szym extends Component {
           </View>
         </ScrollView>
       </>
+    );
+  }
+  AboutMe() {
+    Alert.alert('一个小彩蛋', '这都被你发现了(*/ω＼*)',
+      [
+        { text: "嗯呢", onPress: this.confirm }
+      ]
     );
   }
 }
