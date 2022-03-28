@@ -1,9 +1,0 @@
-top/inlushan/android/MainApplication.java
- top.inlushan.android.MainApplication
- top.inlushan.android.MainApplication$1
-top/inlushan/android/MainActivity.java
- top.inlushan.android.MainActivity
-top/inlushan/android/BuildConfig.java
- top.inlushan.android.BuildConfig
-com/facebook/react/PackageList.java
- com.facebook.react.PackageList
