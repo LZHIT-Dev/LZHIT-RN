@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, TouchableOpacity, Linking, ScrollView } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import Qx from './qx';
 import Syxy from './Syxy';
@@ -20,6 +20,10 @@ class szym extends Component {
           <View style={styles.bodyBackground}>
             <View style={styles.bodyContent}>
               <View style={styles.optionGroup}>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => Linking.openURL('https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=LyS9u&appChannel=share&businessType=9&from=246610&biz=ka')}>
+                  <Text style={styles.optionText}>加入QQ频道</Text>
+                  <Text style={styles.optionTextDescript}>加入 在鹿山App 的官方QQ频道，一起讨论~</Text>
+                </TouchableOpacity>
                 <TouchableOpacity style={styles.optionTextGroup} onPress={() => this.props.navigation.navigate('Syxy')}>
                   <Text style={styles.optionText}>使用协议</Text>
                   <Text style={styles.optionTextDescript}>使用前必看</Text>
