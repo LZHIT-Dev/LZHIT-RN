@@ -30,7 +30,7 @@ const onPressOpenBbsApplet = () => {
   MopSDK.openApplet('61fbca1c8bc99400018e20a7', '', '', data => {});
 };
 //微服务广场
-const onPressOpenWfwApplet = () => {
+const onPressOpenLiteServeApplet = () => {
   MopSDK.openApplet('6242ff4578c1a7000142b24f', '', '', data => {});
 };
 
@@ -139,8 +139,8 @@ class App extends Component {
               <Text style={styles.groupText}>
                  微服务广场
               </Text>
-              <TouchableOpacity onPress={onPressOpenWfwApplet}>
-                <WebView />
+              <TouchableOpacity onPress={onPressOpenLiteServeApplet}>
+              <WebView source={{uri:'file:///android_asset/liteServerPlazaLoad.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:212, marginLeft:30,}} />
               </TouchableOpacity>
             </View>
             <View style={styles.group}>
