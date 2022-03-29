@@ -29,6 +29,10 @@ const onPressOpenSchoolmapApplet = () => {
 const onPressOpenBbsApplet = () => {
   MopSDK.openApplet('61fbca1c8bc99400018e20a7', '', '', data => {});
 };
+//微服务广场
+const onPressOpenWfwApplet = () => {
+  MopSDK.openApplet('6242ff4578c1a7000142b24f', '', '', data => {});
+};
 
 //分享组件
 const userShare = async () => {
@@ -92,7 +96,7 @@ class App extends Component {
               </Text>
               <View style={styles.topImageBtnArea}>
               <TouchableOpacity onPress={() => this.props.navigation.navigate('topInfoJump')}>
-                  <WebView source={{uri:'https://inlushan.top/topInfo.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:75, marginLeft:30,}} />
+                  <WebView source={{uri:'file:///android_asset/jump.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:75, marginLeft:30,}} />
                 </TouchableOpacity>
               </View>
             </View>
@@ -130,6 +134,14 @@ class App extends Component {
                   <Image source={require('./resource/images/schoolMap.png')} style={styles.imageMinBtnSchoolMap} />
                 </TouchableOpacity>
               </View>
+            </View>
+            <View style={styles.group}>
+              <Text style={styles.groupText}>
+                 微服务广场
+              </Text>
+              <TouchableOpacity onPress={onPressOpenWfwApplet}>
+                <WebView />
+              </TouchableOpacity>
             </View>
             <View style={styles.group}>
               <Text style={styles.groupText}>
