@@ -3,5 +3,8 @@
    <domain-config cleartextTrafficPermitted="true">
        <domain includeSubdomains="true">www.pgyer.com</domain>
        <domain includeSubdomains="true">app-global.pgyer.com</domain>
+       <domain includeSubdomains="true">jwglxt.lzhit.edu.cn</domain>
+       <domain includeSubdomains="true">agentdockingopac.featurelib.libsou.com</domain>
+       <domain includeSubdomains="true">xgxt.lzhit.edu.cn</domain>
    </domain-config>
 </network-security-config>
