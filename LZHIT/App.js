@@ -79,7 +79,7 @@ class App extends Component {
     return (
       <>
         <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
-        <ScrollView>
+        <ScrollView overScrollMode={"never"} bounces={false}>
         <View style={styles.titleBar}>
           <Text style={styles.titleText}>在鹿山</Text>
           <Text style={styles.hitokoto}>同学，你好！</Text>
@@ -147,7 +147,7 @@ class App extends Component {
                 </TouchableOpacity>
               </View>
             </View>
-            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.2.0(Release) </Text>
+            <Text style={{alignSelf:"center",marginTop:30,marginBottom:20,fontSize:12,color:'#E9E9E9'}}>App Ver.2.2(Release) </Text>
           </View>
         </View>
         </ScrollView>
