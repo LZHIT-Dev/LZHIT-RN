@@ -1,5 +1,5 @@
 # inLuShan
-
+![](https://img.shields.io/badge/license-MIT-green?style=flat-square) ![](https://img.shields.io/badge/Platform-React%20Native-blue?style=flat-square&logo=react) ![](https://img.shields.io/twitter/follow/Ive422?logo=twitter&style=flat-square)
 [EN]
 
 ![EN](https://api-serv.tzih.top/blog_res/202112182239133.png)
@@ -18,7 +18,7 @@ We use a liberal MIT Open Source License Agreement. Please be aware of your resp
 
 
 # 在鹿山
-
+![](https://img.shields.io/badge/开源协议-MIT-green?style=flat-square) ![](https://img.shields.io/badge/框架-React%20Native-blue?style=flat-square&logo=react) ![](https://img.shields.io/twitter/follow/Ive422?logo=twitter&style=flat-square)
 [中文]
 
 ![CN](https://api-serv.tzih.top/blog_res/202112182239971.png)
