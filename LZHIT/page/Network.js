@@ -5,7 +5,7 @@ import { WebView } from 'react-native-webview';
 const statusBarHeight = StatusBar.currentHeight;
 
 const netWork = () => {
-    const [url, setUrl] = useState('http://10.8.0.253/');
+    const [url, setUrl] = useState('file:///android_asset/networkVerifyCheck.html');
     const [webView, setWebview] = useState(null);
     const [urlInput, setUrlInput] = useState(url);
 
