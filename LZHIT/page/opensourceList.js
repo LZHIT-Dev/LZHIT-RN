@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, StatusBar, TouchableOpacity, Text, ScrollView } from 'react-native';
+import { StyleSheet, View, StatusBar, TouchableOpacity, Text, ScrollView, Linking } from 'react-native';
 
 const statusBarHeight = StatusBar.currentHeight;
 
@@ -93,10 +93,12 @@ const styles = StyleSheet.create({
   optionText: {
     fontSize: 20,
     marginLeft: 30,
+    marginRight:30,
     fontWeight: '800'
   },
   optionTextDescript: {
     marginLeft: 30,
+    marginRight:30,
   },
   optionTextGroup: {
     marginBottom: 30,
