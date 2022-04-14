@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView, Share } from 'react-native';
 import { StackNavigator } from 'react-navigation'
-import Jwxt from './page/jwxt'
 import netWork from './page/Network'
 import libCheck from './page/libCheck';
 import szym from './page/szym'
-import xgxt from './page/xgxt';
 import thePedemic from './page/pedemic';
 import topInfoJump from './page/topinfojump';
 import afdian from './page/afdian';
