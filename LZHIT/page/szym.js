@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, TouchableOpacity, Linking, ScrollView } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import Qx from './qx';
+import opensourceList from './opensourceList';
 import Syxy from './Syxy';
 import updateCheck from './updateCheck';
 import Ysxy from './Ysxy';
@@ -41,6 +42,10 @@ class szym extends Component {
                   <Text style={styles.optionText}>权限</Text>
                   <Text style={styles.optionTextDescript}>点击了解此应用需要什么权限</Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={styles.optionTextGroup} onPress={() => this.props.navigation.navigate('opensourceList')}>
+                  <Text style={styles.optionText}>关于开源</Text>
+                  <Text style={styles.optionTextDescript}>列出在鹿山App使用到的开源项目</Text>
+                </TouchableOpacity>
                 <TouchableOpacity style={styles.optionTextGroup} onPress={() => {Pgyer.showFeedbackView({"自定义参数": "我是自定义参数"})}}>
                   <Text style={styles.optionText}>关于作者</Text>
                   <Text style={styles.optionTextDescript}>©木辛恒同学</Text>
@@ -75,6 +80,9 @@ export default StackNavigator({
   },
   Qx: {
     screen: Qx,
+  },
+  opensourceList: {
+    screen: opensourceList,
   },
   updateCheck: {
     screen: updateCheck,
