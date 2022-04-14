@@ -187,9 +187,6 @@ export default StackNavigator({
   Home: {
     screen: App,
   },
-  Jwxt: {
-    screen: Jwxt,
-  },
   netWork: {
     screen: netWork,
   },
@@ -198,9 +195,6 @@ export default StackNavigator({
   },
   szym: {
     screen: szym,
-  },
-  xgxt: {
-    screen: xgxt,
   },
   thePedemic: {
     screen: thePedemic,
