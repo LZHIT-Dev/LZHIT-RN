@@ -56,45 +56,50 @@ const opensourceList = () => {
 };
 
 const styles = StyleSheet.create({
-    titleBar: {
-        flex: 2,
-        backgroundColor: '#E9E9E9',
-    },
-    titleText: {
-        fontSize: 40,
-        fontWeight: '600',
-        marginLeft: 30,
-        marginTop: 110
-    },
-    hitokoto: {
-        marginTop: 20,
-        marginLeft: 30,
-        marginBottom: 20,
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-    bodyBackground: {
-        flex: 5,
-        backgroundColor: '#E9E9E9',
-    },
-    bodyContent: {
-        flex: 1,
-        backgroundColor: '#FFFFFF',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30,
-        marginBottom: 30
-    },
-    manualTextGroup: {
-        marginLeft: 30,
-        marginTop: 25,
-        marginRight: 30,
-        marginBottom: 30,
-    },
-    manualText: {
-        marginTop: 5,
-        fontSize: 15,
-    },
+  titleBar: {
+    flex: 2,
+    backgroundColor: '#E9E9E9',
+  },
+  titleText: {
+    fontSize: 40,
+    fontWeight: '600',
+    marginLeft: 30,
+    marginTop: 110
+  },
+  hitokoto: {
+    marginTop: 20,
+    marginLeft: 30,
+    marginBottom: 20,
+    fontSize: 20,
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+  },
+  bodyBackground: {
+    flex: 5,
+    backgroundColor: '#E9E9E9',
+  },
+  bodyContent: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+    marginBottom:30
+  },
+  optionGroup: {
+    marginTop: 30,
+  },
+  optionText: {
+    fontSize: 20,
+    marginLeft: 30,
+    fontWeight: '800'
+  },
+  optionTextDescript: {
+    marginLeft: 30,
+  },
+  optionTextGroup: {
+    marginBottom: 30,
+  },
 });
 export default opensourceList;
