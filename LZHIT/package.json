@@ -12,7 +12,6 @@
   "dependencies": {
     "@aicxz/react-native-xiaomi-push": "^1.2.0",
     "@react-native-community/cli-platform-android": "^7.0.1",
-    "@react-native-community/clipboard": "^1.5.1",
     "appcenter": "4.2.0",
     "appcenter-analytics": "4.2.0",
     "appcenter-crashes": "4.2.0",
@@ -26,8 +25,7 @@
     "react-native-pgyer-bridge": "^1.1.0",
     "react-native-shadow-cards": "^1.0.2",
     "react-native-svg": "^12.1.1",
-    "react-native-webview": "^11.13.0",
-    "react-native-webview-tencentx5": "^1.0.2"
+    "react-native-webview": "^11.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

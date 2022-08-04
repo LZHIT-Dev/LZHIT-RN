@@ -4912,6 +4912,11 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
+nanoid@^3.3.3:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
+  integrity sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
@@ -5578,11 +5583,6 @@ react-native-path@^0.0.5:
   resolved "https://repo.huaweicloud.com/repository/npm/react-native-path/-/react-native-path-0.0.5.tgz#a04e4b73a535a8a7cf15c6e760e27db7789afb13"
   integrity sha1-oE5Lc6U1qKfPFcbnYOJ9t3ia+xM=
 
-react-native-pgyer-bridge@^1.1.0:
-  version "1.1.0"
-  resolved "https://repo.huaweicloud.com/repository/npm/react-native-pgyer-bridge/-/react-native-pgyer-bridge-1.1.0.tgz#c73c689284b3ec159f7dd72568231957def60039"
-  integrity sha512-ypd41TpuiNGmYyY5OHKA5EYG2MeyzEfvWZ+6JD5i9g7F0r+7QI4tUP91SQxcG7yJc/2gP8HeOl5t79rr9+S4uw==
-
 react-native-safe-area-view@0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.11.0.tgz#4f3dda43c2bace37965e7c6aef5fc83d4f19d174"
@@ -5624,13 +5624,12 @@ react-native-tab-view@^1.0.0:
   dependencies:
     prop-types "^15.6.1"
 
-react-native-webview-tencentx5@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-webview-tencentx5/-/react-native-webview-tencentx5-1.0.2.tgz#5f343bfaa2a4b6c12bace778985784a552076e74"
-  integrity sha512-czO4X6iRFFSQmqrRRisNMHZR7gUI97tYktRrblim3tHIJohWVMvoVucs+MSZaOx1GUHxNgR2xad1SugvSRWa0g==
+react-native-update@^7.3.8:
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-update/-/react-native-update-7.4.1.tgz#4a850d231cbc8a314a8cd288c372b5c2efbed95e"
+  integrity sha512-QDeXOW4Dp4LHHDyS1Urnh+7cZd8eySXHZ5ukOXtg2KZ7aJZubWXhSTF0Amdc+NBL5tx30rBjxDv7o+Vs3Hi1sQ==
   dependencies:
-    escape-string-regexp "2.0.0"
-    invariant "2.2.4"
+    nanoid "^3.3.3"
 
 react-native-webview@^11.13.0:
   version "11.13.0"

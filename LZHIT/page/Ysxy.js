@@ -10,7 +10,7 @@ const Ysxy = () => {
                 <StatusBar translucent={true} backgroundColor="transparent" barStyle="dark-content" />
                 <View style={styles.titleBar}>
                     <Text style={styles.titleText}>隐私申明</Text>
-                    <Text style={styles.hitokoto}>更新时间：2021年9月22日</Text>
+                    <Text style={styles.hitokoto}>更新时间：2022年5月28日</Text>
                 </View>
                 <View style={styles.bodyBackground}>
                     <View style={styles.bodyContent}>
