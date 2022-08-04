@@ -10,6 +10,7 @@ import afdian from './page/afdian';
 import WebView from "react-native-webview";
 import MopSDK from 'react-native-mopsdk';
 import Pgyer from 'react-native-pgyer-bridge';
+import RNXiaomiPush from '@aicxz/react-native-xiaomi-push';
 
 //小程序容器打开
 const onPressOpenJwxtApplet = () => {

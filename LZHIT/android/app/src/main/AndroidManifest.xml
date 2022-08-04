@@ -49,5 +49,13 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+      <!-- 小米推送 -->
+<application>
+  <meta-data
+    android:name="XIAOMI_APPID"
+    android:value="appid=${XIAOMI_APPID}" />
+  <meta-data
+    android:name="XIAOMI_APPKEY"
+    android:value="appkey=${XIAOMI_APPKEY}" />
     </application>
     </manifest>
