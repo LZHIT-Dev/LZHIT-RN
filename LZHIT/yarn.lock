@@ -3,9 +3,9 @@
 
 
 "@aicxz/react-native-xiaomi-push@^1.2.0":
-  version "1.2.0"
-  resolved "https://repo.huaweicloud.com/repository/npm/@aicxz/react-native-xiaomi-push/-/react-native-xiaomi-push-1.2.0.tgz#d7a2006f4ffccdd773d50cd455675606d5d236ed"
-  integrity sha512-7u4GwuaOgN21a1/i15ZMdnxrIl0i0vqFppRuyRWWMPMpQl4ttzXu59CLPgyv+JRltBsIMMafNBEIFhatKdNDKA==
+  "integrity" "sha512-7u4GwuaOgN21a1/i15ZMdnxrIl0i0vqFppRuyRWWMPMpQl4ttzXu59CLPgyv+JRltBsIMMafNBEIFhatKdNDKA=="
+  "resolved" "https://repo.huaweicloud.com/repository/npm/@aicxz/react-native-xiaomi-push/-/react-native-xiaomi-push-1.2.0.tgz"
+  "version" "1.2.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.14.5":
   version "7.14.5"

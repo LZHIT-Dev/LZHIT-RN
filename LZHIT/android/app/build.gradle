@@ -143,8 +143,8 @@ lintOptions {
         versionCode 23
         versionName "2.3_RELEASE"
             manifestPlaceholders = [
-	  XIAOMI_APPID: "2882303761520054736",
-	  XIAOMI_APPKEY: "5422005461736",
+      XIAOMI_APPID: "2882303761520054736",
+      XIAOMI_APPKEY: "5422005461736",
     ]
     }
     splits {
