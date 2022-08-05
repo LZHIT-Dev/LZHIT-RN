@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@aicxz/react-native-xiaomi-push@^1.2.0":
+  "integrity" "sha512-7u4GwuaOgN21a1/i15ZMdnxrIl0i0vqFppRuyRWWMPMpQl4ttzXu59CLPgyv+JRltBsIMMafNBEIFhatKdNDKA=="
+  "resolved" "https://repo.huaweicloud.com/repository/npm/@aicxz/react-native-xiaomi-push/-/react-native-xiaomi-push-1.2.0.tgz"
+  "version" "1.2.0"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.14.5":
   "integrity" "sha512-9pzDqyc6OLDaqe+zbACgFkb6fKMNG6CObKpnYXChRsvYGyEdc7CA2BaqeOM+vOtCS5ndmJicPJhKAwYRI6UfFw=="
   "resolved" "https://repo.huaweicloud.com/repository/npm/@babel/code-frame/-/code-frame-7.14.5.tgz"

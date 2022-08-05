@@ -28,6 +28,13 @@
        android:name="PGYER_APPID"
        android:value="ca4f383ea4e397a79934c458f758f396" >
    </meta-data>
+   <!--小米推送-->
+     <meta-data
+    android:name="XIAOMI_APPID"
+    android:value="appid=${XIAOMI_APPID}" />
+  <meta-data
+    android:name="XIAOMI_APPKEY"
+    android:value="appkey=${XIAOMI_APPKEY}" />
        <meta-data
             android:name="PGYER_API_KEY"
             android:value="ca4f383ea4e397a79934c458f758f396"></meta-data>
