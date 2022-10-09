@@ -120,9 +120,9 @@ class App extends Component {
                 <TouchableOpacity onPress={this.Network.bind(this)}>
                   <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={onPressOpenBbsApplet}>
+                {/* <TouchableOpacity onPress={onPressOpenBbsApplet}>
                   <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs} />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 <TouchableOpacity onPress={this.Pedemic.bind(this)}>
                   <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic} />
                 </TouchableOpacity>
@@ -134,14 +134,14 @@ class App extends Component {
                 </TouchableOpacity>
               </View>
             </View>
-            <View style={styles.group}>
+            {/* <View style={styles.group}>
               <Text style={styles.groupText}>
                  微服务广场
               </Text>
               <TouchableOpacity onPress={onPressOpenLiteServeApplet}>
               <WebView source={{uri:'file:///android_asset/liteServerPlazaLoad.html'}} sharedCookiesEnabled={true} startInLoadingState={true} style={{height:212, marginLeft:30,}} />
               </TouchableOpacity>
-            </View>
+            </View> */}
             <View style={styles.group}>
               <Text style={styles.groupText}>
                 更多
