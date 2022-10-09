@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@aicxz/react-native-xiaomi-push@^1.2.0":
-  "integrity" "sha512-7u4GwuaOgN21a1/i15ZMdnxrIl0i0vqFppRuyRWWMPMpQl4ttzXu59CLPgyv+JRltBsIMMafNBEIFhatKdNDKA=="
-  "resolved" "https://repo.huaweicloud.com/repository/npm/@aicxz/react-native-xiaomi-push/-/react-native-xiaomi-push-1.2.0.tgz"
-  "version" "1.2.0"
-
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.14.5":
   version "7.14.5"
   resolved "https://repo.huaweicloud.com/repository/npm/@babel/code-frame/-/code-frame-7.14.5.tgz"
@@ -1326,11 +1321,6 @@
     strip-ansi "^5.2.0"
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
-
-"@react-native-community/clipboard@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.npmjs.org/@react-native-community/clipboard/-/clipboard-1.5.1.tgz"
-  integrity sha512-AHAmrkLEH5UtPaDiRqoULERHh3oNv7Dgs0bTC0hO5Z2GdNokAMPT5w8ci8aMcRemcwbtdHjxChgtjbeA38GBdA==
 
 "@react-native-community/eslint-config@^2.0.0":
   version "2.0.0"
@@ -5862,14 +5852,6 @@ react-native-tab-view@^1.0.0:
   integrity sha512-Bke8KkDcDhvB/z0AS7MnQKMD2p6Kwfc1rSKlMOvg9CC5CnClQ2QEnhPSbwegKDYhUkBI92iH/BYy7hNSm5kbUQ==
   dependencies:
     prop-types "^15.6.1"
-
-react-native-webview-tencentx5@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/react-native-webview-tencentx5/-/react-native-webview-tencentx5-1.0.2.tgz"
-  integrity sha512-czO4X6iRFFSQmqrRRisNMHZR7gUI97tYktRrblim3tHIJohWVMvoVucs+MSZaOx1GUHxNgR2xad1SugvSRWa0g==
-  dependencies:
-    escape-string-regexp "2.0.0"
-    invariant "2.2.4"
 
 react-native-webview@^11.13.0:
   version "11.13.0"

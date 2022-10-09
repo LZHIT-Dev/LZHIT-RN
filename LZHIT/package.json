@@ -10,7 +10,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@aicxz/react-native-xiaomi-push": "^1.2.0",
     "@react-native-community/cli-platform-android": "^7.0.1",
     "appcenter": "4.2.0",
     "appcenter-analytics": "4.2.0",
