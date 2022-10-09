@@ -24,13 +24,13 @@ const onPressOpenLibcheckApplet = () => {
 const onPressOpenSchoolmapApplet = () => {
   MopSDK.openApplet('61fbc9ec8bc99400018e20a5', '', '', data => {});
 };
-const onPressOpenBbsApplet = () => {
-  MopSDK.openApplet('61fbca1c8bc99400018e20a7', '', '', data => {});
-};
+// const onPressOpenBbsApplet = () => {
+//   MopSDK.openApplet('61fbca1c8bc99400018e20a7', '', '', data => {});
+// };
 //微服务广场
-const onPressOpenLiteServeApplet = () => {
-  MopSDK.openApplet('6242ff4578c1a7000142b24f', '', '', data => {});
-};
+// const onPressOpenLiteServeApplet = () => {
+//   MopSDK.openApplet('6242ff4578c1a7000142b24f', '', '', data => {});
+// };
 
 //分享组件
 const userShare = async () => {
