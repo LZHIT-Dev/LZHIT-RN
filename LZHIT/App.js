@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView, Share } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView, Share, NativeModules, NativeEventEmitter } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import netWork from './page/Network'
 import libCheck from './page/libCheck';
@@ -11,18 +11,35 @@ import WebView from "react-native-webview";
 import MopSDK from 'react-native-mopsdk';
 import Pgyer from 'react-native-pgyer-bridge';
 
+// 2. mop初始化
+const eventEmitter = new NativeEventEmitter(NativeModules.FINMopSDK);
+  MopSDK.initialize({
+    appkey:
+      'rel7xAYijZYWFY/TUj0CgPzgIHI/lBDkWFvNgcDWCzo=', // SDK Key
+    secret: '4e7d6a94ec7c2ded', // SDK Secret
+    apiServer: 'https://api.finclip.com', // 服务器地址
+    apiPrefix: '/api/v1/mop/', // 服务器接口请求路由前缀
+    nativeEventEmitter: eventEmitter,
+    finMopSDK: NativeModules.FINMopSDK,
+  }).then(res => {
+    console.log('初始化成功')
+  }).catch(err => {
+    console.log('初始化失败')
+  })
+
+
 //小程序容器打开
 const onPressOpenJwxtApplet = () => {
-  MopSDK.openApplet('61faa3e88bc99400018e2093', '', '', data => {});
+  MopSDK.openApplet({appId: '61faa3e88bc99400018e2093'});
 };
 const onPressOpenXgptApplet = () => {
-  MopSDK.openApplet('61faa8868bc99400018e2094', '', '', data => {});
+  MopSDK.openApplet({appId: '61faa8868bc99400018e2094'});
 };
 const onPressOpenLibcheckApplet = () => {
-  MopSDK.openApplet('61fbbf588bc99400018e20a1', '', '', data => {});
+  MopSDK.openApplet({appId: '61fbbf588bc99400018e20a1'});
 };
 const onPressOpenSchoolmapApplet = () => {
-  MopSDK.openApplet('61fbc9ec8bc99400018e20a5', '', '', data => {});
+  MopSDK.openApplet({appId: '61fbc9ec8bc99400018e20a5'});
 };
 // const onPressOpenBbsApplet = () => {
 //   MopSDK.openApplet('61fbca1c8bc99400018e20a7', '', '', data => {});
