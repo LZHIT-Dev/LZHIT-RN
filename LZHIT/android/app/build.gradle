@@ -140,8 +140,8 @@ lintOptions {
         applicationId "top.inlushan.android"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 23
-        versionName "2.3_RELEASE"
+        versionCode 25
+        versionName "2.5_RELEASE"
     }
     splits {
         abi {
