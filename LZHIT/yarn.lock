@@ -5797,10 +5797,10 @@ react-native-linear-gradient@^2.5.6:
   resolved "https://registry.npmjs.org/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz"
   integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
 
-react-native-mopsdk@^1.0.2:
-  version "1.0.2"
-  resolved "https://repo.huaweicloud.com/repository/npm/react-native-mopsdk/-/react-native-mopsdk-1.0.2.tgz"
-  integrity sha512-jmE3lDoTdp/StnD0Ac7A6hvFDPBy/zs6G+kFfspo+Rf8Cl5xaC9supWG0chye2r8ABnTv8359iz1sujv+S4d8w==
+react-native-mopsdk@1.0.5:
+  version "1.0.5"
+  resolved "https://repo.huaweicloud.com/repository/npm/react-native-mopsdk/-/react-native-mopsdk-1.0.5.tgz#248c7cbcd382333717331ae5f3da4dbdf1c3345e"
+  integrity sha512-tdDbcTYTiJAa6bF2q9AJrm7uyvdELwTCBd9SNbRVvDsrpqQvm5YKRZtO2uT147ax4ExDRXlhT65hpmIpKlielg==
 
 react-native-path@^0.0.5:
   version "0.0.5"

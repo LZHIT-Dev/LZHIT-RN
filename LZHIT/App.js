@@ -1,31 +1,55 @@
-import React, { Component } from 'react';
+import React, { Component,useEffect } from 'react';
 import { StyleSheet, Text, View, StatusBar, Image, Alert, TouchableOpacity, Linking, ScrollView, Share, NativeModules, NativeEventEmitter } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import netWork from './page/Network'
 import libCheck from './page/libCheck';
 import szym from './page/szym'
-import thePedemic from './page/pedemic';
+// import thePedemic from './page/pedemic';
 import topInfoJump from './page/topinfojump';
 import afdian from './page/afdian';
-import WebView from "react-native-webview";
+// import WebView from "react-native-webview";
 import MopSDK from 'react-native-mopsdk';
 import Pgyer from 'react-native-pgyer-bridge';
 
-// 2. mop初始化
-const eventEmitter = new NativeEventEmitter(NativeModules.FINMopSDK);
-  MopSDK.initialize({
-    appkey:
-      'rel7xAYijZYWFY/TUj0CgPzgIHI/lBDkWFvNgcDWCzo=', // SDK Key
-    secret: '4e7d6a94ec7c2ded', // SDK Secret
-    apiServer: 'https://api.finclip.com', // 服务器地址
-    apiPrefix: '/api/v1/mop/', // 服务器接口请求路由前缀
-    nativeEventEmitter: eventEmitter,
-    finMopSDK: NativeModules.FINMopSDK,
-  }).then(res => {
-    console.log('初始化成功')
-  }).catch(err => {
-    console.log('初始化失败')
-  })
+let isInited = false;
+
+useEffect(() => {
+  if (!isInited) {
+    const eventEmitter = new NativeEventEmitter(NativeModules.FINMopSDK);
+    MopSDK.initialize({
+      appkey:
+        'rel7xAYijZYWFY/TUj0CgPzgIHI/lBDkWFvNgcDWCzo=',
+      secret: '4e7d6a94ec7c2ded',
+      apiServer: 'https://api.finclip.com',
+      apiPrefix: '/api/v1/mop/',
+      nativeEventEmitter: eventEmitter,
+      finMopSDK: NativeModules.FINMopSDK,
+    })
+      .then(res => {
+        isInited = true;
+        Alert.alert('初始化成功');
+      })
+      .catch(error => {
+        Alert.alert('初始化失败');
+      });
+  }
+});
+
+// // 2. mop初始化
+// const eventEmitter = new NativeEventEmitter(NativeModules.FINMopSDK);
+//   MopSDK.initialize({
+//     appkey:
+//       'rel7xAYijZYWFY/TUj0CgPzgIHI/lBDkWFvNgcDWCzo=', // SDK Key
+//     secret: '4e7d6a94ec7c2ded', // SDK Secret
+//     apiServer: 'https://api.finclip.com', // 服务器地址
+//     apiPrefix: '/api/v1/mop/', // 服务器接口请求路由前缀
+//     nativeEventEmitter: eventEmitter,
+//     finMopSDK: NativeModules.FINMopSDK,
+//   }).then(res => {
+//     console.log('初始化成功')
+//   }).catch(err => {
+//     console.log('初始化失败')
+//   })
 
 
 //小程序容器打开
@@ -136,12 +160,14 @@ class App extends Component {
                 <TouchableOpacity onPress={this.Network.bind(this)}>
                   <Image source={require('./resource/images/network.png')} style={styles.imageMinBtnNetwork} />
                 </TouchableOpacity>
+                {/* 树洞社区 */}
                 {/* <TouchableOpacity onPress={onPressOpenBbsApplet}>
                   <Image source={require('./resource/images/bbs.png')} style={styles.imageMinBtnBbs} />
                 </TouchableOpacity> */}
-                <TouchableOpacity onPress={this.Pedemic.bind(this)}>
+                {/* 疫情服务 */}
+                {/* <TouchableOpacity onPress={this.Pedemic.bind(this)}>
                   <Image source={require('./resource/images/pedemic.png')} style={styles.imageMinBtnPedemic} />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 <TouchableOpacity onPress={onPressOpenLibcheckApplet}>
                   <Image source={require('./resource/images/libCheck.png')} style={styles.imageMinBtnLibCheck} />
                 </TouchableOpacity>
@@ -213,9 +239,9 @@ export default StackNavigator({
   szym: {
     screen: szym,
   },
-  thePedemic: {
-    screen: thePedemic,
-  },
+  // thePedemic: {
+  //   screen: thePedemic,
+  // },
   topInfoJump: {
     screen: topInfoJump,
   },
