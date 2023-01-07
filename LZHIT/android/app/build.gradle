@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: 'com.google.gms.google-services'
+apply plugin: "com.tencent.android.tpns"
 
 import com.android.build.OutputFile
 
@@ -142,6 +143,14 @@ lintOptions {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 25
         versionName "2.5_RELEASE"
+        manifestPlaceholders = [
+            XG_ACCESS_ID : "1580007104",  //信鸽官网注册所得ACCESS_ID
+            XG_ACCESS_KEY : "ACTBHG1PO7XZ", //信鸽官网注册所得ACCESS_KEY
+            
+        ]
+        ndk {
+    abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+}
     }
     splits {
         abi {

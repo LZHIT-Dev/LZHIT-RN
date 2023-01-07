@@ -1,0 +1,14 @@
+{
+    "tpns": {
+        "access_id": "1500034677",
+        "access_key": "A6JPDJG50Y59"
+    },
+    "top.inlushan.android": {
+        "channel": {
+            "enable": true
+        }
+    },
+    "debug": false,
+    "version": "1.3.7.2-release",
+    "upgrade": true
+}

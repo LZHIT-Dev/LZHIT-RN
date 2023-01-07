@@ -25,7 +25,7 @@
     "react-native-shadow-cards": "^1.0.2",
     "react-native-svg": "^13.6.0",
     "react-native-webview": "^11.26.0",
-    "rn-app-upgrade": "^2.1.8"
+    "tpns_rn_plugin": "^1.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
