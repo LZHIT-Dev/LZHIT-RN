@@ -142,6 +142,10 @@ lintOptions {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 25
         versionName "2.5_RELEASE"
+        manifestPlaceholders = [
+                  JPUSH_APPKEY: "dee787a8d3c7a920d15b4677",         //在此替换你的APPKey
+                  JPUSH_CHANNEL: "miPUSH"        //在此替换你的channel
+          ]
     }
     splits {
         abi {
@@ -190,6 +194,8 @@ lintOptions {
 }
 
 dependencies {
+          implementation project(':jpush-react-native')  // 添加 jpush 依赖
+      implementation project(':jcore-react-native')  // 添加 jcore 依赖
     implementation platform('com.google.firebase:firebase-bom:28.4.2')
     implementation 'com.google.firebase:firebase-analytics'
     implementation fileTree(dir: "libs", include: ["*.jar"])
